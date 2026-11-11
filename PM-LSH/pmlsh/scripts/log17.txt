@@ -1,0 +1,53 @@
+Using PM-LSH for random ...
+N=        1000000
+dim=      1000000
+c=        1.5
+k=        20
+m=        30
+LOADING DATA...
+dimension mismatch
+Using PM-LSH for random ...
+N=        1000000
+dim=      1000000
+c=        1.5
+k=        20
+m=        30
+LOADING DATA...
+dimension mismatch
+Using PM-LSH for seismic1m ...
+N=        1000000
+dim=      256
+c=        1.5
+k=        100
+m=        30
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.62015 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 6.2213 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 4.04436 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    336.952ms.
+
+TOTAL QUERY TIME:  33695.2ms.
+
+AVG RECALL:        0.9139
+AVG MAP:           0.860657
+AVG RATIO:         1.00056
+AVG COST:          0.280495
+AVG ROUNDS:        23.93

@@ -1,0 +1,74 @@
+Using DB-LSH for ukbench ...
+c=        1.5
+k=        20
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ukbench/
+N=    1097907
+dim=  128
+
+Qnum=  200
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.779718s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000277s.
+
+COMPUTING HASH...
+COMPUTING TIME: 3.01179s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.136s
+The 1-th R*-Tree has been built. Elapsed time: 1.084s
+The 2-th R*-Tree has been built. Elapsed time: 1.109s
+The 3-th R*-Tree has been built. Elapsed time: 1.090s
+The 4-th R*-Tree has been built. Elapsed time: 1.090s
+The 5-th R*-Tree has been built. Elapsed time: 1.105s
+The 6-th R*-Tree has been built. Elapsed time: 1.090s
+The 7-th R*-Tree has been built. Elapsed time: 1.109s
+The 8-th R*-Tree has been built. Elapsed time: 1.096s
+The 9-th R*-Tree has been built. Elapsed time: 1.094s
+The 10-th R*-Tree has been built. Elapsed time: 1.119s
+The 11-th R*-Tree has been built. Elapsed time: 1.100s
+The 12-th R*-Tree has been built. Elapsed time: 1.106s
+The 13-th R*-Tree has been built. Elapsed time: 1.094s
+The 14-th R*-Tree has been built. Elapsed time: 1.101s
+BUILDING TIME: 16.525s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    162.738ms.
+
+TOTAL QUERY TIME:    32547.7ms.
+
+AVG RECALL:        0.98525
+AVG MAP:        0.976632
+3941 4000 20
+AVG RATIO:         1.00035
+AVG COST:          0.100018
+AVG ROUNDS:        6.535
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

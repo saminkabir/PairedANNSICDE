@@ -1,0 +1,9 @@
+./script10.sh> log10.txt
+./script11.sh> log11.txt
+./script12.sh> log12.txt
+./script13.sh> log13.txt
+./script14.sh> log14.txt
+./script15.sh> log15.txt
+./script16.sh> log16.txt
+./script17.sh> log17.txt
+./script18.sh> log18.txt

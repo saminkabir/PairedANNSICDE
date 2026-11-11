@@ -1,0 +1,60 @@
+Using PM-LSH for yahoo-minilm-384-normalized ...
+N=        677305
+dim=      384
+c=        1.1
+k=        100
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.535598 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.34205 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 1.91643 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    177.129ms.
+
+TOTAL QUERY TIME:  17712.9ms.
+
+AVG RECALL:        0.6397
+AVG MAP:           0.489631
+AVG RATIO:         1.01854
+AVG COST:          0.200019
+AVG ROUNDS:        30.05
+	Command being timed: "./pmlsh yahoo-minilm-384-normalized 677305 384 5 1.1 0.2 1.0 100"
+	User time (seconds): 20.64
+	System time (seconds): 0.96
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:21.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1782916
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 450973
+	Voluntary context switches: 3
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,74 @@
+Using DB-LSH for deep ...
+c=        1.5
+k=        20
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/deep/
+N=    1000000
+dim=  256
+
+Qnum=  200
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.28554s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000523s.
+
+COMPUTING HASH...
+COMPUTING TIME: 4.16361s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.023s
+The 1-th R*-Tree has been built. Elapsed time: 0.993s
+The 2-th R*-Tree has been built. Elapsed time: 1.002s
+The 3-th R*-Tree has been built. Elapsed time: 1.008s
+The 4-th R*-Tree has been built. Elapsed time: 1.002s
+The 5-th R*-Tree has been built. Elapsed time: 1.000s
+The 6-th R*-Tree has been built. Elapsed time: 0.997s
+The 7-th R*-Tree has been built. Elapsed time: 1.007s
+The 8-th R*-Tree has been built. Elapsed time: 0.995s
+The 9-th R*-Tree has been built. Elapsed time: 1.014s
+The 10-th R*-Tree has been built. Elapsed time: 1.007s
+The 11-th R*-Tree has been built. Elapsed time: 0.996s
+The 12-th R*-Tree has been built. Elapsed time: 1.010s
+The 13-th R*-Tree has been built. Elapsed time: 1.005s
+The 14-th R*-Tree has been built. Elapsed time: 1.007s
+BUILDING TIME: 15.0655s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    38.983ms.
+
+TOTAL QUERY TIME:    7796.61ms.
+
+AVG RECALL:        0.098
+AVG MAP:        0.0326042
+392 4000 20
+AVG RATIO:         1.13759
+AVG COST:          0.10002
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

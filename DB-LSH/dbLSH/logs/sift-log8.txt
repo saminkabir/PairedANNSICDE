@@ -1,0 +1,64 @@
+Using DB-LSH for sift ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/sift/
+N=    1000000
+dim=  128
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.607632s.
+
+LOADING BENMARK...
+LOADING TIME: 0.044991s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000127s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.950378s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.012s
+The 1-th R*-Tree has been built. Elapsed time: 0.994s
+The 2-th R*-Tree has been built. Elapsed time: 0.996s
+The 3-th R*-Tree has been built. Elapsed time: 1.010s
+The 4-th R*-Tree has been built. Elapsed time: 0.996s
+BUILDING TIME: 5.00913s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    85.6261ms.
+
+TOTAL QUERY TIME:    856261ms.
+
+AVG RECALL:        0.968066
+AVG MAP:        0.949354
+968066 1000000 100
+AVG RATIO:         1.00018
+AVG COST:          0.1001
+AVG ROUNDS:        8.5336
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

@@ -1,0 +1,60 @@
+Using PM-LSH for glove_hundred ...
+N=        1192514
+dim=      100
+c=        1.5
+k=        100
+m=        10
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.344969 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.16416 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 5.22929 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    423.079ms.
+
+TOTAL QUERY TIME:  42307.9ms.
+
+AVG RECALL:        0.9546
+AVG MAP:           0.924081
+AVG RATIO:         1.0009
+AVG COST:          0.322831
+AVG ROUNDS:        16.25
+	Command being timed: "./pmlsh glove_hundred 1192514 100 10 1.5 0.4 1.0 100 glove_hundred-log14.ivecs"
+	User time (seconds): 47.93
+	System time (seconds): 1.35
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:49.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1893936
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 664751
+	Voluntary context switches: 1
+	Involuntary context switches: 72
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 152
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

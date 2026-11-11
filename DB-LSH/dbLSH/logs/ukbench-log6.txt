@@ -1,0 +1,69 @@
+Using DB-LSH for ukbench ...
+c=        1.5
+k=        20
+L=        10
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ukbench/
+N=    1097907
+dim=  128
+
+Qnum=  200
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.788686s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000191s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.95964s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.305s
+The 1-th R*-Tree has been built. Elapsed time: 1.234s
+The 2-th R*-Tree has been built. Elapsed time: 1.236s
+The 3-th R*-Tree has been built. Elapsed time: 1.243s
+The 4-th R*-Tree has been built. Elapsed time: 1.216s
+The 5-th R*-Tree has been built. Elapsed time: 1.249s
+The 6-th R*-Tree has been built. Elapsed time: 1.230s
+The 7-th R*-Tree has been built. Elapsed time: 1.247s
+The 8-th R*-Tree has been built. Elapsed time: 1.150s
+The 9-th R*-Tree has been built. Elapsed time: 1.190s
+BUILDING TIME: 12.2981s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    126.362ms.
+
+TOTAL QUERY TIME:    25272.4ms.
+
+AVG RECALL:        0.97475
+AVG MAP:        0.962304
+3899 4000 20
+AVG RATIO:         1.00063
+AVG COST:          0.100018
+AVG ROUNDS:        6.74
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

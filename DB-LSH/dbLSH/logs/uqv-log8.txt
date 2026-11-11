@@ -1,0 +1,64 @@
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.00892s.
+
+LOADING BENMARK...
+LOADING TIME: 0.002532s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000225s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.54724s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.944s
+The 1-th R*-Tree has been built. Elapsed time: 0.954s
+The 2-th R*-Tree has been built. Elapsed time: 0.949s
+The 3-th R*-Tree has been built. Elapsed time: 0.939s
+The 4-th R*-Tree has been built. Elapsed time: 0.976s
+BUILDING TIME: 4.76212s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    35.8209ms.
+
+TOTAL QUERY TIME:    358209ms.
+
+AVG RECALL:        0.138601
+AVG MAP:        0.0704511
+138601 1000000 100
+AVG RATIO:         2.3393
+AVG COST:          0.1001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

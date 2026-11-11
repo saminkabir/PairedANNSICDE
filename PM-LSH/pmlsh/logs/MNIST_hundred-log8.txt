@@ -1,0 +1,67 @@
+Using PM-LSH for MNIST_hundred ...
+N=        69000
+dim=      784
+c=        1.5
+k=        100
+m=        10
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.117916 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.532734 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 11.6061 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.157075 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    18.3521ms.
+
+TOTAL QUERY TIME:  1835.21ms.
+
+AVG RECALL:        0.9017
+AVG MAP:           0.856479
+AVG RATIO:         1.00521
+AVG COST:          0.171292
+AVG ROUNDS:        17.04
+	Command being timed: "./pmlsh MNIST_hundred 69000 784 10 1.5 0.2 1.0 100 MNIST_hundred-log8.ivecs"
+	User time (seconds): 13.92
+	System time (seconds): 0.38
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 335396
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 157605
+	Voluntary context switches: 7
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 416
+	File system outputs: 1024
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

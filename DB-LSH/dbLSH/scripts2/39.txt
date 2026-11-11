@@ -1,0 +1,527 @@
+Using DB-LSH for tiny5m ...
+c=        1.75
+k=        20
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 10.1058s.
+
+LOADING BENMARK...
+LOADING TIME: 0.021913s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000338s.
+
+COMPUTING HASH...
+COMPUTING TIME: 8.67029s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.132s
+The 1-th R*-Tree has been built. Elapsed time: 6.276s
+The 2-th R*-Tree has been built. Elapsed time: 6.287s
+The 3-th R*-Tree has been built. Elapsed time: 6.331s
+The 4-th R*-Tree has been built. Elapsed time: 6.255s
+BUILDING TIME: 31.2812s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    271.407ms.
+
+TOTAL QUERY TIME:    271407ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.25
+k=        20
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 8.91914s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000223s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000243s.
+
+COMPUTING HASH...
+COMPUTING TIME: 8.77884s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.330s
+The 1-th R*-Tree has been built. Elapsed time: 6.450s
+The 2-th R*-Tree has been built. Elapsed time: 6.369s
+The 3-th R*-Tree has been built. Elapsed time: 6.377s
+The 4-th R*-Tree has been built. Elapsed time: 6.333s
+BUILDING TIME: 31.8587s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    274.243ms.
+
+TOTAL QUERY TIME:    274243ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        5
+K=        10
+beta=     0.1
+R_min=    300
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 9.21487s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000221s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00025s.
+
+COMPUTING HASH...
+COMPUTING TIME: 8.64628s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.298s
+The 1-th R*-Tree has been built. Elapsed time: 6.343s
+The 2-th R*-Tree has been built. Elapsed time: 6.297s
+The 3-th R*-Tree has been built. Elapsed time: 6.306s
+The 4-th R*-Tree has been built. Elapsed time: 6.259s
+BUILDING TIME: 31.5035s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    271.178ms.
+
+TOTAL QUERY TIME:    271178ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        5
+K=        10
+beta=     0.1
+R_min=    600
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 8.26729s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000248s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000295s.
+
+COMPUTING HASH...
+COMPUTING TIME: 8.58959s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.112s
+The 1-th R*-Tree has been built. Elapsed time: 6.263s
+The 2-th R*-Tree has been built. Elapsed time: 6.327s
+The 3-th R*-Tree has been built. Elapsed time: 6.304s
+The 4-th R*-Tree has been built. Elapsed time: 6.131s
+BUILDING TIME: 31.136s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    271.574ms.
+
+TOTAL QUERY TIME:    271574ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        10
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 9.36746s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000224s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000473s.
+
+COMPUTING HASH...
+COMPUTING TIME: 17.2499s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.322s
+The 1-th R*-Tree has been built. Elapsed time: 6.319s
+The 2-th R*-Tree has been built. Elapsed time: 6.314s
+The 3-th R*-Tree has been built. Elapsed time: 6.340s
+The 4-th R*-Tree has been built. Elapsed time: 6.266s
+The 5-th R*-Tree has been built. Elapsed time: 6.274s
+The 6-th R*-Tree has been built. Elapsed time: 6.304s
+The 7-th R*-Tree has been built. Elapsed time: 6.320s
+The 8-th R*-Tree has been built. Elapsed time: 6.293s
+The 9-th R*-Tree has been built. Elapsed time: 6.376s
+BUILDING TIME: 63.1268s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    273.349ms.
+
+TOTAL QUERY TIME:    273349ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 9.06312s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000218s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000656s.
+
+COMPUTING HASH...
+COMPUTING TIME: 26.0017s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.223s
+The 1-th R*-Tree has been built. Elapsed time: 6.290s
+The 2-th R*-Tree has been built. Elapsed time: 6.400s
+The 3-th R*-Tree has been built. Elapsed time: 6.412s
+The 4-th R*-Tree has been built. Elapsed time: 6.313s
+The 5-th R*-Tree has been built. Elapsed time: 6.327s
+The 6-th R*-Tree has been built. Elapsed time: 6.374s
+The 7-th R*-Tree has been built. Elapsed time: 6.377s
+The 8-th R*-Tree has been built. Elapsed time: 6.272s
+The 9-th R*-Tree has been built. Elapsed time: 6.353s
+The 10-th R*-Tree has been built. Elapsed time: 6.398s
+The 11-th R*-Tree has been built. Elapsed time: 6.297s
+The 12-th R*-Tree has been built. Elapsed time: 6.337s
+The 13-th R*-Tree has been built. Elapsed time: 6.415s
+The 14-th R*-Tree has been built. Elapsed time: 6.329s
+BUILDING TIME: 95.1156s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    270.584ms.
+
+TOTAL QUERY TIME:    270584ms.
+
+AVG RECALL:        0.0724
+AVG MAP:        0.0272465
+1448 20000 20
+AVG RATIO:         1.26199
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 8.53564s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000223s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000321s.
+
+COMPUTING HASH...
+COMPUTING TIME: 10.3722s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.258s
+The 1-th R*-Tree has been built. Elapsed time: 6.329s
+The 2-th R*-Tree has been built. Elapsed time: 6.279s
+The 3-th R*-Tree has been built. Elapsed time: 6.264s
+The 4-th R*-Tree has been built. Elapsed time: 6.245s
+BUILDING TIME: 31.3752s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    271.555ms.
+
+TOTAL QUERY TIME:    271555ms.
+
+AVG RECALL:        0.07455
+AVG MAP:        0.024363
+1491 20000 20
+AVG RATIO:         1.17666
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for tiny5m ...
+c=        1.5
+k=        20
+L=        5
+K=        14
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/tiny5m/
+N=    5000000
+dim=  384
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 9.30603s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000221s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000348s.
+
+COMPUTING HASH...
+COMPUTING TIME: 11.7944s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 6.275s
+The 1-th R*-Tree has been built. Elapsed time: 6.259s
+The 2-th R*-Tree has been built. Elapsed time: 6.288s
+The 3-th R*-Tree has been built. Elapsed time: 6.248s
+The 4-th R*-Tree has been built. Elapsed time: 6.273s
+BUILDING TIME: 31.3429s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    272.462ms.
+
+TOTAL QUERY TIME:    272462ms.
+
+AVG RECALL:        0.0811
+AVG MAP:        0.0224947
+1622 20000 20
+AVG RATIO:         1.16644
+AVG COST:          0.100004
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

@@ -1,0 +1,67 @@
+Using PM-LSH for ukbench ...
+N=        1097907
+dim=      128
+c=        1.5
+k=        20
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.442311 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.807159 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 48.7778 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.99579 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    175.181ms.
+
+TOTAL QUERY TIME:  17518.1ms.
+
+AVG RECALL:        0.8955
+AVG MAP:           0.845818
+AVG RATIO:         1.00453
+AVG COST:          0.14986
+AVG ROUNDS:        30.82
+	Command being timed: "./pmlsh ukbench 1097907 128 5 1.5 0.2 1.0 20"
+	User time (seconds): 70.16
+	System time (seconds): 1.53
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:11.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2406260
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 778327
+	Voluntary context switches: 1
+	Involuntary context switches: 97
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

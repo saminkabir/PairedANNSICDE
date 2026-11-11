@@ -1,0 +1,165 @@
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   new-alg-5-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-5-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-5-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-5-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min4max12var1.txt
+	modified:   new-alg-6-original-swapping-2/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min3max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min3max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min3max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min4max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min4max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min3max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min3max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min3max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min3max11var1.txt
+	modified:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min4max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min4max11var1.txt
+	modified:   new-alg-6-original-swapping-2/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min4max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min3max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min3max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min3max12var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min4max10var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min4max11var1.txt
+	new file:   new-alg-6-original-swapping-2/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min3max10var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min4max10var1.txt
+	modified:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min4max9var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min5max10var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min5max9var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min6max10var1.txt
+	new file:   new-alg-6-original-swapping-3/finalTests2/vaq-log-trevi-swapping-new-alg-5,VAQ64m8min6max9var1.txt
+	modified:   new-alg-6-original-swapping-6/finalTests2/vaq-log-bigann-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	modified:   new-alg-6-original-swapping-6/finalTests2/vaq-log-imageNet-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-millionSong-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-nuswide-finetuning,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-sift-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-space1V-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-word2vec-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min3max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min3max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min3max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min4max10var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ128m16min4max11var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min3max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min4max12var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min4max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min5max13var1.txt
+	new file:   new-alg-6-original-swapping-6/finalTests2/vaq-log-yahoomusic-swapping-new-alg-5,VAQ256m32min6max13var1.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   build/CMakeCache.txt
+	modified:   build/CMakeFiles/CMakeDirectoryInformation.cmake
+	modified:   build/CMakeFiles/Makefile2
+	modified:   build/CMakeFiles/TargetDirectories.txt
+	modified:   build/Makefile
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/BitVecEngine.cpp.o
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/BitVecEngine.cpp.o.d
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/DependInfo.cmake
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/build.make
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/compiler_depend.internal
+	modified:   build/bitvecengine/CMakeFiles/BitVecEngine.dir/flags.make
+	modified:   build/bitvecengine/CMakeFiles/CMakeDirectoryInformation.cmake
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/DependInfo.cmake
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/build.make
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/compiler_depend.internal
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/flags.make
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/utils/FPGrowth/fptree.cpp.o
+	modified:   build/bitvecengine/CMakeFiles/FPGrowth.dir/utils/FPGrowth/fptree.cpp.o.d
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/DependInfo.cmake
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/VAQ.cpp.o
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/VAQ.cpp.o.d
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/build.make
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/compiler_depend.internal
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/flags.make
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/utils/Heap.cpp.o
+	modified:   build/bitvecengine/CMakeFiles/VAQ.dir/utils/Heap.cpp.o.d
+	modified:   build/bitvecengine/Makefile
+	modified:   build/bitvecengine/cmake_install.cmake
+	modified:   build/bitvecengine/libBitVecEngine.so
+	modified:   build/bitvecengine/libFPGrowth.so
+	modified:   build/bitvecengine/libVAQ.so
+	modified:   build/cmake_install.cmake
+	modified:   build/examples/CMakeFiles/CMakeDirectoryInformation.cmake
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/DependInfo.cmake
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/build.make
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/compiler_depend.internal
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/demo_vaq.cpp.o
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/demo_vaq.cpp.o.d
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/flags.make
+	modified:   build/examples/CMakeFiles/demo_vaq.dir/link.txt
+	modified:   build/examples/Makefile
+	modified:   build/examples/cmake_install.cmake
+	modified:   build/examples/demo_vaq
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	tests.txt
+

@@ -1,0 +1,3 @@
+libglpk_la-qmd.lo: misc/qmd.c /usr/include/stdc-predef.h misc/qmd.h
+/usr/include/stdc-predef.h:
+misc/qmd.h:

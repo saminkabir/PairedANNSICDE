@@ -1,0 +1,72 @@
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.210809s.
+
+MAKING BENMARK...
+Benchmark k updated to: 100
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+MAKING TIME: 1.89297s.
+
+SAVING BENMARK...
+SAVING TIME: 0.000218s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000195s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.18421s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.070s
+The 1-th R*-Tree has been built. Elapsed time: 0.068s
+The 2-th R*-Tree has been built. Elapsed time: 0.071s
+The 3-th R*-Tree has been built. Elapsed time: 0.071s
+The 4-th R*-Tree has been built. Elapsed time: 0.067s
+BUILDING TIME: 0.347335s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    9.7849ms.
+
+TOTAL QUERY TIME:    978.49ms.
+
+AVG RECALL:        0.6873
+AVG MAP:        0.616773
+6873 10000 100
+AVG RATIO:         1.00326
+AVG COST:          0.100619
+AVG ROUNDS:        15.23
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

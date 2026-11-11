@@ -1,0 +1,60 @@
+Using PM-LSH for nuswide ...
+N=        268643
+dim=      500
+c=        1.75
+k=        20
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.394024 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.566163 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.525042 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    56.6447ms.
+
+TOTAL QUERY TIME:  5664.47ms.
+
+AVG RECALL:        0.612
+AVG MAP:           0.435566
+AVG RATIO:         1.00911
+AVG COST:          0.188899
+AVG ROUNDS:        17.46
+	Command being timed: "./pmlsh nuswide 268643 500 5 1.75 0.2 1.0 20 nuswide-log16.ivecs"
+	User time (seconds): 6.75
+	System time (seconds): 0.43
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 807828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 204137
+	Voluntary context switches: 4
+	Involuntary context switches: 19
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

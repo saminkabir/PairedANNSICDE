@@ -1,0 +1,60 @@
+Using PM-LSH for sun ...
+N=        79106
+dim=      512
+c=        1.5
+k=        20
+m=        10
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.133083 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.401061 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.174931 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    17.5466ms.
+
+TOTAL QUERY TIME:  1754.66ms.
+
+AVG RECALL:        0.9205
+AVG MAP:           0.86785
+AVG RATIO:         1.00234
+AVG COST:          0.178211
+AVG ROUNDS:        49.88
+	Command being timed: "./pmlsh sun 79106 512 10 1.5 0.2 20.0 20 sun-log11.ivecs"
+	User time (seconds): 2.32
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 257136
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 64139
+	Voluntary context switches: 0
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

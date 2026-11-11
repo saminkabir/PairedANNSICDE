@@ -1,0 +1,17 @@
+Using PM-LSH for crawl ...
+N=        1989995
+dim=      300
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.36209 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 8.0244 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+******************************************

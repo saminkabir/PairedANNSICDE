@@ -1,0 +1,67 @@
+Using PM-LSH for celeba-resnet-2048-cosine ...
+N=        201599
+dim=      2048
+c=        1.5
+k=        100
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.959596 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 2.06992 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 42.5805 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.504312 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    119.815ms.
+
+TOTAL QUERY TIME:  11981.5ms.
+
+AVG RECALL:        0.7738
+AVG MAP:           0.653084
+AVG RATIO:         1.00914
+AVG COST:          0.193115
+AVG ROUNDS:        17.38
+	Command being timed: "./pmlsh celeba-resnet-2048-cosine 201599 2048 5 1.5 0.2 1.0 100"
+	User time (seconds): 56.38
+	System time (seconds): 1.81
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:58.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1838000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 566434
+	Voluntary context switches: 1
+	Involuntary context switches: 91
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

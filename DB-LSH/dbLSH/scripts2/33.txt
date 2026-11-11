@@ -1,0 +1,711 @@
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.907686s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000268s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002926s.
+
+COMPUTING HASH...
+COMPUTING TIME: 21.3732s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.321s
+The 1-th R*-Tree has been built. Elapsed time: 1.295s
+The 2-th R*-Tree has been built. Elapsed time: 1.299s
+The 3-th R*-Tree has been built. Elapsed time: 1.245s
+The 4-th R*-Tree has been built. Elapsed time: 1.227s
+The 5-th R*-Tree has been built. Elapsed time: 1.219s
+The 6-th R*-Tree has been built. Elapsed time: 1.216s
+The 7-th R*-Tree has been built. Elapsed time: 1.247s
+The 8-th R*-Tree has been built. Elapsed time: 1.221s
+The 9-th R*-Tree has been built. Elapsed time: 1.201s
+The 10-th R*-Tree has been built. Elapsed time: 1.222s
+The 11-th R*-Tree has been built. Elapsed time: 1.289s
+The 12-th R*-Tree has been built. Elapsed time: 1.364s
+The 13-th R*-Tree has been built. Elapsed time: 1.402s
+The 14-th R*-Tree has been built. Elapsed time: 1.400s
+The 15-th R*-Tree has been built. Elapsed time: 1.383s
+The 16-th R*-Tree has been built. Elapsed time: 1.322s
+The 17-th R*-Tree has been built. Elapsed time: 1.222s
+The 18-th R*-Tree has been built. Elapsed time: 1.341s
+The 19-th R*-Tree has been built. Elapsed time: 1.248s
+BUILDING TIME: 25.6838s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    54.3393ms.
+
+TOTAL QUERY TIME:    54339.3ms.
+
+AVG RECALL:        0.0472
+AVG MAP:        0.0109811
+4720 100000 100
+AVG RATIO:         1.15375
+AVG COST:          0.1001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.2
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.888708s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000252s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002592s.
+
+COMPUTING HASH...
+COMPUTING TIME: 21.3571s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.317s
+The 1-th R*-Tree has been built. Elapsed time: 1.436s
+The 2-th R*-Tree has been built. Elapsed time: 1.524s
+The 3-th R*-Tree has been built. Elapsed time: 1.328s
+The 4-th R*-Tree has been built. Elapsed time: 1.415s
+The 5-th R*-Tree has been built. Elapsed time: 1.356s
+The 6-th R*-Tree has been built. Elapsed time: 1.244s
+The 7-th R*-Tree has been built. Elapsed time: 1.249s
+The 8-th R*-Tree has been built. Elapsed time: 1.234s
+The 9-th R*-Tree has been built. Elapsed time: 1.259s
+The 10-th R*-Tree has been built. Elapsed time: 1.340s
+The 11-th R*-Tree has been built. Elapsed time: 1.363s
+The 12-th R*-Tree has been built. Elapsed time: 1.341s
+The 13-th R*-Tree has been built. Elapsed time: 1.374s
+The 14-th R*-Tree has been built. Elapsed time: 1.367s
+The 15-th R*-Tree has been built. Elapsed time: 1.358s
+The 16-th R*-Tree has been built. Elapsed time: 1.364s
+The 17-th R*-Tree has been built. Elapsed time: 1.355s
+The 18-th R*-Tree has been built. Elapsed time: 1.396s
+The 19-th R*-Tree has been built. Elapsed time: 1.354s
+BUILDING TIME: 26.974s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    104.743ms.
+
+TOTAL QUERY TIME:    104743ms.
+
+AVG RECALL:        0.14115
+AVG MAP:        0.0446186
+14115 100000 100
+AVG RATIO:         1.0572
+AVG COST:          0.2001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.3
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.965639s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000231s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002627s.
+
+COMPUTING HASH...
+COMPUTING TIME: 21.5351s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.410s
+The 1-th R*-Tree has been built. Elapsed time: 1.357s
+The 2-th R*-Tree has been built. Elapsed time: 1.366s
+The 3-th R*-Tree has been built. Elapsed time: 1.319s
+The 4-th R*-Tree has been built. Elapsed time: 1.504s
+The 5-th R*-Tree has been built. Elapsed time: 1.355s
+The 6-th R*-Tree has been built. Elapsed time: 1.309s
+The 7-th R*-Tree has been built. Elapsed time: 1.318s
+The 8-th R*-Tree has been built. Elapsed time: 1.328s
+The 9-th R*-Tree has been built. Elapsed time: 1.305s
+The 10-th R*-Tree has been built. Elapsed time: 1.306s
+The 11-th R*-Tree has been built. Elapsed time: 1.292s
+The 12-th R*-Tree has been built. Elapsed time: 1.304s
+The 13-th R*-Tree has been built. Elapsed time: 1.310s
+The 14-th R*-Tree has been built. Elapsed time: 1.296s
+The 15-th R*-Tree has been built. Elapsed time: 1.302s
+The 16-th R*-Tree has been built. Elapsed time: 1.320s
+The 17-th R*-Tree has been built. Elapsed time: 1.291s
+The 18-th R*-Tree has been built. Elapsed time: 1.315s
+The 19-th R*-Tree has been built. Elapsed time: 1.325s
+BUILDING TIME: 26.633s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    116.66ms.
+
+TOTAL QUERY TIME:    116660ms.
+
+AVG RECALL:        0.24058
+AVG MAP:        0.0974448
+24058 100000 100
+AVG RATIO:         1.03964
+AVG COST:          0.3001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.4
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.905094s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000252s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002641s.
+
+COMPUTING HASH...
+COMPUTING TIME: 21.7616s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.346s
+The 1-th R*-Tree has been built. Elapsed time: 1.287s
+The 2-th R*-Tree has been built. Elapsed time: 1.277s
+The 3-th R*-Tree has been built. Elapsed time: 1.278s
+The 4-th R*-Tree has been built. Elapsed time: 1.290s
+The 5-th R*-Tree has been built. Elapsed time: 1.293s
+The 6-th R*-Tree has been built. Elapsed time: 1.282s
+The 7-th R*-Tree has been built. Elapsed time: 1.277s
+The 8-th R*-Tree has been built. Elapsed time: 1.286s
+The 9-th R*-Tree has been built. Elapsed time: 1.275s
+The 10-th R*-Tree has been built. Elapsed time: 1.278s
+The 11-th R*-Tree has been built. Elapsed time: 1.265s
+The 12-th R*-Tree has been built. Elapsed time: 1.275s
+The 13-th R*-Tree has been built. Elapsed time: 1.286s
+The 14-th R*-Tree has been built. Elapsed time: 1.270s
+The 15-th R*-Tree has been built. Elapsed time: 1.261s
+The 16-th R*-Tree has been built. Elapsed time: 1.270s
+The 17-th R*-Tree has been built. Elapsed time: 1.286s
+The 18-th R*-Tree has been built. Elapsed time: 1.286s
+The 19-th R*-Tree has been built. Elapsed time: 1.322s
+BUILDING TIME: 25.6903s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    165.898ms.
+
+TOTAL QUERY TIME:    165898ms.
+
+AVG RECALL:        0.47938
+AVG MAP:        0.288799
+47938 100000 100
+AVG RATIO:         1.02252
+AVG COST:          0.4001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.5
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.940958s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000228s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002596s.
+
+COMPUTING HASH...
+COMPUTING TIME: 21.1372s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.299s
+The 1-th R*-Tree has been built. Elapsed time: 1.254s
+The 2-th R*-Tree has been built. Elapsed time: 1.262s
+The 3-th R*-Tree has been built. Elapsed time: 1.242s
+The 4-th R*-Tree has been built. Elapsed time: 1.255s
+The 5-th R*-Tree has been built. Elapsed time: 1.262s
+The 6-th R*-Tree has been built. Elapsed time: 1.266s
+The 7-th R*-Tree has been built. Elapsed time: 1.244s
+The 8-th R*-Tree has been built. Elapsed time: 1.253s
+The 9-th R*-Tree has been built. Elapsed time: 1.247s
+The 10-th R*-Tree has been built. Elapsed time: 1.249s
+The 11-th R*-Tree has been built. Elapsed time: 1.261s
+The 12-th R*-Tree has been built. Elapsed time: 1.249s
+The 13-th R*-Tree has been built. Elapsed time: 1.244s
+The 14-th R*-Tree has been built. Elapsed time: 1.248s
+The 15-th R*-Tree has been built. Elapsed time: 1.246s
+The 16-th R*-Tree has been built. Elapsed time: 1.249s
+The 17-th R*-Tree has been built. Elapsed time: 1.265s
+The 18-th R*-Tree has been built. Elapsed time: 1.245s
+The 19-th R*-Tree has been built. Elapsed time: 1.262s
+BUILDING TIME: 25.1035s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    205.086ms.
+
+TOTAL QUERY TIME:    205086ms.
+
+AVG RECALL:        0.64941
+AVG MAP:        0.485045
+64941 100000 100
+AVG RATIO:         1.01469
+AVG COST:          0.5001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.6
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.990266s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000244s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002856s.
+
+COMPUTING HASH...
+COMPUTING TIME: 23.3129s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.398s
+The 1-th R*-Tree has been built. Elapsed time: 1.367s
+The 2-th R*-Tree has been built. Elapsed time: 1.357s
+The 3-th R*-Tree has been built. Elapsed time: 1.329s
+The 4-th R*-Tree has been built. Elapsed time: 1.360s
+The 5-th R*-Tree has been built. Elapsed time: 1.361s
+The 6-th R*-Tree has been built. Elapsed time: 1.306s
+The 7-th R*-Tree has been built. Elapsed time: 1.371s
+The 8-th R*-Tree has been built. Elapsed time: 1.373s
+The 9-th R*-Tree has been built. Elapsed time: 1.323s
+The 10-th R*-Tree has been built. Elapsed time: 1.329s
+The 11-th R*-Tree has been built. Elapsed time: 1.361s
+The 12-th R*-Tree has been built. Elapsed time: 1.317s
+The 13-th R*-Tree has been built. Elapsed time: 1.327s
+The 14-th R*-Tree has been built. Elapsed time: 1.371s
+The 15-th R*-Tree has been built. Elapsed time: 1.365s
+The 16-th R*-Tree has been built. Elapsed time: 1.306s
+The 17-th R*-Tree has been built. Elapsed time: 1.346s
+The 18-th R*-Tree has been built. Elapsed time: 1.365s
+The 19-th R*-Tree has been built. Elapsed time: 1.310s
+BUILDING TIME: 26.9414s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    250.781ms.
+
+TOTAL QUERY TIME:    250781ms.
+
+AVG RECALL:        0.75035
+AVG MAP:        0.61263
+75035 100000 100
+AVG RATIO:         1.00967
+AVG COST:          0.6001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.7
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.03866s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000267s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003109s.
+
+COMPUTING HASH...
+COMPUTING TIME: 23.3906s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.427s
+The 1-th R*-Tree has been built. Elapsed time: 1.306s
+The 2-th R*-Tree has been built. Elapsed time: 1.387s
+The 3-th R*-Tree has been built. Elapsed time: 1.353s
+The 4-th R*-Tree has been built. Elapsed time: 1.340s
+The 5-th R*-Tree has been built. Elapsed time: 1.364s
+The 6-th R*-Tree has been built. Elapsed time: 1.358s
+The 7-th R*-Tree has been built. Elapsed time: 1.360s
+The 8-th R*-Tree has been built. Elapsed time: 1.320s
+The 9-th R*-Tree has been built. Elapsed time: 1.368s
+The 10-th R*-Tree has been built. Elapsed time: 1.361s
+The 11-th R*-Tree has been built. Elapsed time: 1.331s
+The 12-th R*-Tree has been built. Elapsed time: 1.339s
+The 13-th R*-Tree has been built. Elapsed time: 1.353s
+The 14-th R*-Tree has been built. Elapsed time: 1.337s
+The 15-th R*-Tree has been built. Elapsed time: 1.371s
+The 16-th R*-Tree has been built. Elapsed time: 1.360s
+The 17-th R*-Tree has been built. Elapsed time: 1.323s
+The 18-th R*-Tree has been built. Elapsed time: 1.348s
+The 19-th R*-Tree has been built. Elapsed time: 1.376s
+BUILDING TIME: 27.0822s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    290.266ms.
+
+TOTAL QUERY TIME:    290266ms.
+
+AVG RECALL:        0.84959
+AVG MAP:        0.754055
+84959 100000 100
+AVG RATIO:         1.00543
+AVG COST:          0.7001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.8
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.978424s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000257s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003049s.
+
+COMPUTING HASH...
+COMPUTING TIME: 22.0641s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.363s
+The 1-th R*-Tree has been built. Elapsed time: 1.301s
+The 2-th R*-Tree has been built. Elapsed time: 1.280s
+The 3-th R*-Tree has been built. Elapsed time: 1.300s
+The 4-th R*-Tree has been built. Elapsed time: 1.265s
+The 5-th R*-Tree has been built. Elapsed time: 1.276s
+The 6-th R*-Tree has been built. Elapsed time: 1.281s
+The 7-th R*-Tree has been built. Elapsed time: 1.276s
+The 8-th R*-Tree has been built. Elapsed time: 1.283s
+The 9-th R*-Tree has been built. Elapsed time: 1.285s
+The 10-th R*-Tree has been built. Elapsed time: 1.291s
+The 11-th R*-Tree has been built. Elapsed time: 1.273s
+The 12-th R*-Tree has been built. Elapsed time: 1.303s
+The 13-th R*-Tree has been built. Elapsed time: 1.280s
+The 14-th R*-Tree has been built. Elapsed time: 1.283s
+The 15-th R*-Tree has been built. Elapsed time: 1.294s
+The 16-th R*-Tree has been built. Elapsed time: 1.282s
+The 17-th R*-Tree has been built. Elapsed time: 1.274s
+The 18-th R*-Tree has been built. Elapsed time: 1.304s
+The 19-th R*-Tree has been built. Elapsed time: 1.285s
+BUILDING TIME: 25.7805s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    328.61ms.
+
+TOTAL QUERY TIME:    328610ms.
+
+AVG RECALL:        0.93536
+AVG MAP:        0.886228
+93536 100000 100
+AVG RATIO:         1.00251
+AVG COST:          0.8001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for word2vec ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.9
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/word2vec/
+N=    1000000
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.953881s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000237s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002629s.
+
+COMPUTING HASH...
+COMPUTING TIME: 22.2364s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.351s
+The 1-th R*-Tree has been built. Elapsed time: 1.296s
+The 2-th R*-Tree has been built. Elapsed time: 1.307s
+The 3-th R*-Tree has been built. Elapsed time: 1.295s
+The 4-th R*-Tree has been built. Elapsed time: 1.291s
+The 5-th R*-Tree has been built. Elapsed time: 1.301s
+The 6-th R*-Tree has been built. Elapsed time: 1.293s
+The 7-th R*-Tree has been built. Elapsed time: 1.264s
+The 8-th R*-Tree has been built. Elapsed time: 1.294s
+The 9-th R*-Tree has been built. Elapsed time: 1.299s
+The 10-th R*-Tree has been built. Elapsed time: 1.289s
+The 11-th R*-Tree has been built. Elapsed time: 1.293s
+The 12-th R*-Tree has been built. Elapsed time: 1.284s
+The 13-th R*-Tree has been built. Elapsed time: 1.283s
+The 14-th R*-Tree has been built. Elapsed time: 1.316s
+The 15-th R*-Tree has been built. Elapsed time: 1.289s
+The 16-th R*-Tree has been built. Elapsed time: 1.291s
+The 17-th R*-Tree has been built. Elapsed time: 1.282s
+The 18-th R*-Tree has been built. Elapsed time: 1.288s
+The 19-th R*-Tree has been built. Elapsed time: 1.294s
+BUILDING TIME: 25.9005s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    403.59ms.
+
+TOTAL QUERY TIME:    403590ms.
+
+AVG RECALL:        0.97365
+AVG MAP:        0.950802
+97365 100000 100
+AVG RATIO:         1.00116
+AVG COST:          0.9001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

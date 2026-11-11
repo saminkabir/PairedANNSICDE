@@ -1,0 +1,60 @@
+Using PM-LSH for random ...
+N=        1000000
+dim=      100
+c=        1.5
+k=        20
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.278672 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.55492 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.43486 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    225.985ms.
+
+TOTAL QUERY TIME:  22598.5ms.
+
+AVG RECALL:        0.9335
+AVG MAP:           0.909299
+AVG RATIO:         1.0542
+AVG COST:          0.255851
+AVG ROUNDS:        9.84
+	Command being timed: "./pmlsh random 1000000 100 5 1.5 0.4 1.0 20"
+	User time (seconds): 26.28
+	System time (seconds): 0.66
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1301520
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 330580
+	Voluntary context switches: 3
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

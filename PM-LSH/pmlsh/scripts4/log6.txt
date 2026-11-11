@@ -1,0 +1,44 @@
+Using PM-LSH for crawl ...
+N=        1989995
+dim=      300
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.38672 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 7.97767 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 7217.21 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 8.3287 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    497.567ms.
+
+TOTAL QUERY TIME:  49756.7ms.
+
+AVG RECALL:        0.8258
+AVG MAP:           0.742052
+AVG RATIO:         1.00515
+AVG COST:          0.0910136
+AVG ROUNDS:        17.19

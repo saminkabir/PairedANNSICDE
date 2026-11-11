@@ -1,0 +1,35 @@
+Using DB-LSH for lendb ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/lendb/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.28576s.
+
+LOADING BENMARK...
+LOADING TIME: 3.4e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000352s.
+
+COMPUTING HASH...
+COMPUTING TIME: 2.67905s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.

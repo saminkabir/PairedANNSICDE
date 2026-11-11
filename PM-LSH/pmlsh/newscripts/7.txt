@@ -1,0 +1,222 @@
+Using PM-LSH for crawl ...
+N=        1989995
+dim=      300
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.26858 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 7.84938 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 7.43364 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    477.586ms.
+
+TOTAL QUERY TIME:  47758.6ms.
+
+AVG RECALL:        0.7868
+AVG MAP:           0.688373
+AVG RATIO:         1.00663
+AVG COST:          0.0886988
+AVG ROUNDS:        17.17
+Using PM-LSH for tiny5m ...
+N=        5000000
+dim=      384
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 14.7214 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 26.7266 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 23.3604 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    1172.4ms.
+
+TOTAL QUERY TIME:  117240ms.
+
+AVG RECALL:        0.8557
+AVG MAP:           0.773607
+AVG RATIO:         1.00274
+AVG COST:          0.0825542
+AVG ROUNDS:        6.14
+Using PM-LSH for crawl ...
+N=        1989995
+dim=      300
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.18267 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 7.46886 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 6.86259 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    420.98ms.
+
+TOTAL QUERY TIME:  42098ms.
+
+AVG RECALL:        0.7494
+AVG MAP:           0.651939
+AVG RATIO:         1.00821
+AVG COST:          0.0693978
+AVG ROUNDS:        17.16
+Using PM-LSH for tiny5m ...
+N=        5000000
+dim=      384
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 3.61506 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 24.8871 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 20.1556 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    929.5ms.
+
+TOTAL QUERY TIME:  92950ms.
+
+AVG RECALL:        0.8379
+AVG MAP:           0.751256
+AVG RATIO:         1.00327
+AVG COST:          0.0601677
+AVG ROUNDS:        6.16
+Using PM-LSH for crawl ...
+N=        1989995
+dim=      300
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.16776 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 7.43562 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 6.89175 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    388.615ms.
+
+TOTAL QUERY TIME:  38861.5ms.
+
+AVG RECALL:        0.708
+AVG MAP:           0.597645
+AVG RATIO:         1.01095
+AVG COST:          0.04592
+AVG ROUNDS:        17.18
+Using PM-LSH for tiny5m ...
+N=        5000000
+dim=      384
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 3.6696 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 24.8515 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 20.0352 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    898.014ms.
+
+TOTAL QUERY TIME:  89801.4ms.
+
+AVG RECALL:        0.7554
+AVG MAP:           0.629884
+AVG RATIO:         1.00548
+AVG COST:          0.043942
+AVG ROUNDS:        6.15

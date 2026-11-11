@@ -1,0 +1,148 @@
+Using PM-LSH for imageNet ...
+N=        2340373
+dim=      150
+c=        1.25
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.82317 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 4.40462 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 8.42739 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    234.492ms.
+
+TOTAL QUERY TIME:  23449.2ms.
+
+AVG RECALL:        0.485
+AVG MAP:           0.443311
+AVG RATIO:         1.1936
+AVG COST:          0.0686667
+AVG ROUNDS:        1.75
+Using PM-LSH for imageNet ...
+N=        2340373
+dim=      150
+c=        1.25
+k=        20
+m=        20
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.760244 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 5.83438 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 9.32542 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    269.183ms.
+
+TOTAL QUERY TIME:  26918.3ms.
+
+AVG RECALL:        0.6775
+AVG MAP:           0.653063
+AVG RATIO:         1.1188
+AVG COST:          0.045216
+AVG ROUNDS:        2.12
+Using PM-LSH for imageNet ...
+N=        2340373
+dim=      150
+c=        1.25
+k=        20
+m=        30
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.768027 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 8.53745 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 11.1617 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    339.079ms.
+
+TOTAL QUERY TIME:  33907.9ms.
+
+AVG RECALL:        0.7945
+AVG MAP:           0.775967
+AVG RATIO:         1.103
+AVG COST:          0.0273597
+AVG ROUNDS:        3.03
+Using PM-LSH for imageNet ...
+N=        2340373
+dim=      150
+c=        1.25
+k=        20
+m=        30
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.759884 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 8.548 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 11.208 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    0.10328ms.
+
+TOTAL QUERY TIME:  10.328ms.
+
+AVG RECALL:        0
+AVG MAP:           0
+AVG RATIO:         2.14506
+AVG COST:          1.09726e-05
+AVG ROUNDS:        1

@@ -1,0 +1,60 @@
+Using PM-LSH for Meier2019JGR ...
+N=        1000000
+dim=      256
+c=        1.25
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.462229 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.2777 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.22644 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    92.2599ms.
+
+TOTAL QUERY TIME:  9225.99ms.
+
+AVG RECALL:        0.8566
+AVG MAP:           0.791685
+AVG RATIO:         1.00749
+AVG COST:          0.130531
+AVG ROUNDS:        39.72
+	Command being timed: "./pmlsh Meier2019JGR 1000000 256 15 1.25 0.2 1.0 100"
+	User time (seconds): 15.79
+	System time (seconds): 0.49
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1441268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 365579
+	Voluntary context switches: 1
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

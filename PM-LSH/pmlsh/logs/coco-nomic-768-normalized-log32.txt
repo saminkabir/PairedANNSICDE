@@ -1,0 +1,60 @@
+Using PM-LSH for coco-nomic-768-normalized ...
+N=        282360
+dim=      768
+c=        1.15
+k=        100
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.675723 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.0891 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.738799 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    96.3396ms.
+
+TOTAL QUERY TIME:  9633.96ms.
+
+AVG RECALL:        0.1803
+AVG MAP:           0.064681
+AVG RATIO:         1.00519
+AVG COST:          0.199912
+AVG ROUNDS:        24
+	Command being timed: "./pmlsh coco-nomic-768-normalized 282360 768 5 1.15 0.2 1.0 100"
+	User time (seconds): 11.39
+	System time (seconds): 0.80
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1073584
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 270535
+	Voluntary context switches: 3
+	Involuntary context switches: 18
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 96
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

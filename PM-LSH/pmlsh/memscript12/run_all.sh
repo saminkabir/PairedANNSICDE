@@ -1,0 +1,1 @@
+bash MNIST_hundred.sh & bash audio_hundred.sh & bash deep_hundred.sh & bash glove_hundred.sh & bash imageNet_hundred.sh & bash millionSong_hundred.sh & bash notre_hundred.sh & bash nuswide_hundred.sh & bash sun_hundred.sh & bash sift_twenty.sh & echo 1

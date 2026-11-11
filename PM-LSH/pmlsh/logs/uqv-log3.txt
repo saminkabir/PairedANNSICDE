@@ -1,0 +1,60 @@
+Using PM-LSH for uqv ...
+N=        1000000
+dim=      256
+c=        1.25
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.622487 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.81296 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 4.201 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    0.17809ms.
+
+TOTAL QUERY TIME:  17.809ms.
+
+AVG RECALL:        0.0023
+AVG MAP:           0
+AVG RATIO:         2.98014
+AVG COST:          0.00010677
+AVG ROUNDS:        1
+	Command being timed: "./pmlsh uqv 1000000 256 15 1.25 0.2 1.0 100"
+	User time (seconds): 8.28
+	System time (seconds): 0.80
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1457636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 369656
+	Voluntary context switches: 2
+	Involuntary context switches: 14
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

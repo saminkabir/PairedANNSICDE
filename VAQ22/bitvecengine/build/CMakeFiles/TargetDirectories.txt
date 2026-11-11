@@ -1,0 +1,4 @@
+/relative_path/Papers/VAQ/bitvecengine/build/CMakeFiles/VAQ.dir
+/relative_path/Papers/VAQ/bitvecengine/build/CMakeFiles/FPGrowth.dir
+/relative_path/Papers/VAQ/bitvecengine/build/CMakeFiles/edit_cache.dir
+/relative_path/Papers/VAQ/bitvecengine/build/CMakeFiles/rebuild_cache.dir

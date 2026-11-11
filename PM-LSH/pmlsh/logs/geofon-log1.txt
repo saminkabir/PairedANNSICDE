@@ -1,0 +1,73 @@
+Using PM-LSH for geofon ...
+N=        275174
+dim=      128
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.153686 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.508084 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.845606 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    23.9388ms.
+
+TOTAL QUERY TIME:  2393.88ms.
+
+AVG RECALL:        0.9744
+AVG MAP:           0.965169
+AVG RATIO:         1.00125
+AVG COST:          0.023793
+AVG ROUNDS:        44.7
+	Command be*
+
+FINISH QUERY!
+
+AVG QUERY TIME:    21.3701ms.
+
+TOTAL QUERY TIME:  2137.01ms.
+
+AVG RECALL:        0.9856
+AVG MAP:           0.981144
+AVG RATIO:         1.00052
+AVG COST:          0.020565
+AVG ROUNDS:        16.48
+	Command being timed: "./pmlsh geofon 275174 128 15 1.5 0.2 300 100"
+	User time (seconds): 8.72
+	System time (seconds): 0.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 400248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 164268
+	Voluntary context switches: 3
+	Involuntary context switches: 17
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 488
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

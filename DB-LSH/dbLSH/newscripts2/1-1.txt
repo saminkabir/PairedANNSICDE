@@ -1,0 +1,2970 @@
+Using DB-LSH for ethz ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.045049s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000179s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.047578s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.078455s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.39422ms.
+
+TOTAL QUERY TIME:    239.422ms.
+
+AVG RECALL:        0.9483
+AVG MAP:        0.930238
+9483 10000 100
+AVG RATIO:         1.00146
+AVG COST:          0.102721
+AVG ROUNDS:        12.18
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.040358s.
+
+LOADING BENMARK...
+LOADING TIME: 2.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000178s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.048105s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.015s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.078911s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.45065ms.
+
+TOTAL QUERY TIME:    245.065ms.
+
+AVG RECALL:        0.8375
+AVG MAP:        0.817078
+8375 10000 100
+AVG RATIO:         2.27719e+34
+AVG COST:          0.0566995
+AVG ROUNDS:        29.09
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.047275s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00035s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.095809s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+The 5-th R*-Tree has been built. Elapsed time: 0.016s
+The 6-th R*-Tree has been built. Elapsed time: 0.016s
+The 7-th R*-Tree has been built. Elapsed time: 0.016s
+The 8-th R*-Tree has been built. Elapsed time: 0.016s
+The 9-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.162578s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    3.9039ms.
+
+TOTAL QUERY TIME:    390.39ms.
+
+AVG RECALL:        0.9555
+AVG MAP:        0.940188
+9555 10000 100
+AVG RATIO:         1.00125
+AVG COST:          0.102721
+AVG ROUNDS:        16.62
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.046913s.
+
+LOADING BENMARK...
+LOADING TIME: 2.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000508s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.146368s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.018s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+The 5-th R*-Tree has been built. Elapsed time: 0.016s
+The 6-th R*-Tree has been built. Elapsed time: 0.016s
+The 7-th R*-Tree has been built. Elapsed time: 0.016s
+The 8-th R*-Tree has been built. Elapsed time: 0.016s
+The 9-th R*-Tree has been built. Elapsed time: 0.016s
+The 10-th R*-Tree has been built. Elapsed time: 0.016s
+The 11-th R*-Tree has been built. Elapsed time: 0.016s
+The 12-th R*-Tree has been built. Elapsed time: 0.016s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+BUILDING TIME: 0.246103s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    4.85604ms.
+
+TOTAL QUERY TIME:    485.604ms.
+
+AVG RECALL:        0.9561
+AVG MAP:        0.939803
+9561 10000 100
+AVG RATIO:         1.00118
+AVG COST:          0.102721
+AVG ROUNDS:        16.57
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.034772s.
+
+LOADING BENMARK...
+LOADING TIME: 2.4e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000212s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.056357s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.021s
+The 1-th R*-Tree has been built. Elapsed time: 0.021s
+The 2-th R*-Tree has been built. Elapsed time: 0.021s
+The 3-th R*-Tree has been built. Elapsed time: 0.021s
+The 4-th R*-Tree has been built. Elapsed time: 0.023s
+BUILDING TIME: 0.107567s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.59878ms.
+
+TOTAL QUERY TIME:    259.878ms.
+
+AVG RECALL:        0.955
+AVG MAP:        0.936993
+9550 10000 100
+AVG RATIO:         1.0008
+AVG COST:          0.102721
+AVG ROUNDS:        16.7
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.048382s.
+
+LOADING BENMARK...
+LOADING TIME: 4.1e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000296s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.064796s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.022s
+The 1-th R*-Tree has been built. Elapsed time: 0.022s
+The 2-th R*-Tree has been built. Elapsed time: 0.022s
+The 3-th R*-Tree has been built. Elapsed time: 0.022s
+The 4-th R*-Tree has been built. Elapsed time: 0.023s
+BUILDING TIME: 0.11069s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    3.08955ms.
+
+TOTAL QUERY TIME:    308.955ms.
+
+AVG RECALL:        0.9531
+AVG MAP:        0.938272
+9531 10000 100
+AVG RATIO:         1.00086
+AVG COST:          0.102721
+AVG ROUNDS:        17.21
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.047326s.
+
+LOADING BENMARK...
+LOADING TIME: 2.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000183s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.047912s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.015s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.079269s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.83096ms.
+
+TOTAL QUERY TIME:    283.096ms.
+
+AVG RECALL:        0.9439
+AVG MAP:        0.924599
+9439 10000 100
+AVG RATIO:         1.00134
+AVG COST:          0.102721
+AVG ROUNDS:        10.6
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.05132s.
+
+LOADING BENMARK...
+LOADING TIME: 3.3e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000187s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.0486s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.080291s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.48163ms.
+
+TOTAL QUERY TIME:    248.163ms.
+
+AVG RECALL:        0.9448
+AVG MAP:        0.925407
+9448 10000 100
+AVG RATIO:         1.00132
+AVG COST:          0.102721
+AVG ROUNDS:        7.49
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.049922s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000181s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.048844s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.07923s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    3.86719ms.
+
+TOTAL QUERY TIME:    386.719ms.
+
+AVG RECALL:        0.9516
+AVG MAP:        0.933499
+9516 10000 100
+AVG RATIO:         1.00116
+AVG COST:          0.102421
+AVG ROUNDS:        19.64
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    300
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.049921s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000182s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.04779s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.078749s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    1.76755ms.
+
+TOTAL QUERY TIME:    176.755ms.
+
+AVG RECALL:        0.5926
+AVG MAP:        0.576171
+5926 10000 100
+AVG RATIO:         1.33762
+AVG COST:          0.102721
+AVG ROUNDS:        2.15
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    600
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.040445s.
+
+LOADING BENMARK...
+LOADING TIME: 2.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000182s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.047872s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.078524s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    1.29249ms.
+
+TOTAL QUERY TIME:    129.249ms.
+
+AVG RECALL:        0.4798
+AVG MAP:        0.464286
+4798 10000 100
+AVG RATIO:         1.78445
+AVG COST:          0.102721
+AVG ROUNDS:        1.4
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.048603s.
+
+LOADING BENMARK...
+LOADING TIME: 2.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000343s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.095387s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.016s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.016s
+The 4-th R*-Tree has been built. Elapsed time: 0.016s
+The 5-th R*-Tree has been built. Elapsed time: 0.016s
+The 6-th R*-Tree has been built. Elapsed time: 0.016s
+The 7-th R*-Tree has been built. Elapsed time: 0.017s
+The 8-th R*-Tree has been built. Elapsed time: 0.017s
+The 9-th R*-Tree has been built. Elapsed time: 0.017s
+BUILDING TIME: 0.163768s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    3.85978ms.
+
+TOTAL QUERY TIME:    385.978ms.
+
+AVG RECALL:        0.9518
+AVG MAP:        0.937095
+9518 10000 100
+AVG RATIO:         1.00124
+AVG COST:          0.102721
+AVG ROUNDS:        10.38
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.049944s.
+
+LOADING BENMARK...
+LOADING TIME: 2.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000527s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.149281s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.019s
+The 1-th R*-Tree has been built. Elapsed time: 0.017s
+The 2-th R*-Tree has been built. Elapsed time: 0.017s
+The 3-th R*-Tree has been built. Elapsed time: 0.017s
+The 4-th R*-Tree has been built. Elapsed time: 0.017s
+The 5-th R*-Tree has been built. Elapsed time: 0.017s
+The 6-th R*-Tree has been built. Elapsed time: 0.017s
+The 7-th R*-Tree has been built. Elapsed time: 0.017s
+The 8-th R*-Tree has been built. Elapsed time: 0.017s
+The 9-th R*-Tree has been built. Elapsed time: 0.017s
+The 10-th R*-Tree has been built. Elapsed time: 0.017s
+The 11-th R*-Tree has been built. Elapsed time: 0.017s
+The 12-th R*-Tree has been built. Elapsed time: 0.017s
+The 13-th R*-Tree has been built. Elapsed time: 0.017s
+The 14-th R*-Tree has been built. Elapsed time: 0.017s
+BUILDING TIME: 0.255781s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    4.97562ms.
+
+TOTAL QUERY TIME:    497.562ms.
+
+AVG RECALL:        0.9522
+AVG MAP:        0.937254
+9522 10000 100
+AVG RATIO:         1.00125
+AVG COST:          0.102721
+AVG ROUNDS:        10.29
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.050608s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000211s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.055603s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.022s
+The 1-th R*-Tree has been built. Elapsed time: 0.021s
+The 2-th R*-Tree has been built. Elapsed time: 0.021s
+The 3-th R*-Tree has been built. Elapsed time: 0.021s
+The 4-th R*-Tree has been built. Elapsed time: 0.022s
+BUILDING TIME: 0.107468s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.65402ms.
+
+TOTAL QUERY TIME:    265.402ms.
+
+AVG RECALL:        0.9534
+AVG MAP:        0.937011
+9534 10000 100
+AVG RATIO:         1.00077
+AVG COST:          0.102721
+AVG ROUNDS:        10.39
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for ethz ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/ethz/
+N=    36643
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.040617s.
+
+LOADING BENMARK...
+LOADING TIME: 2.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000246s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.063313s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.022s
+The 1-th R*-Tree has been built. Elapsed time: 0.022s
+The 2-th R*-Tree has been built. Elapsed time: 0.021s
+The 3-th R*-Tree has been built. Elapsed time: 0.022s
+The 4-th R*-Tree has been built. Elapsed time: 0.023s
+BUILDING TIME: 0.109627s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.87289ms.
+
+TOTAL QUERY TIME:    287.289ms.
+
+AVG RECALL:        0.9621
+AVG MAP:        0.945418
+9621 10000 100
+AVG RATIO:         1.00071
+AVG COST:          0.102721
+AVG ROUNDS:        10.87
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.228197s.
+
+LOADING BENMARK...
+LOADING TIME: 2.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00018s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.208584s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.089s
+The 1-th R*-Tree has been built. Elapsed time: 0.083s
+The 2-th R*-Tree has been built. Elapsed time: 0.096s
+The 3-th R*-Tree has been built. Elapsed time: 0.095s
+The 4-th R*-Tree has been built. Elapsed time: 0.095s
+BUILDING TIME: 0.457033s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    9.23212ms.
+
+TOTAL QUERY TIME:    923.212ms.
+
+AVG RECALL:        0.6634
+AVG MAP:        0.584431
+6634 10000 100
+AVG RATIO:         1.00732
+AVG COST:          0.100619
+AVG ROUNDS:        10.89
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.222109s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000183s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.20878s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.088s
+The 1-th R*-Tree has been built. Elapsed time: 0.089s
+The 2-th R*-Tree has been built. Elapsed time: 0.088s
+The 3-th R*-Tree has been built. Elapsed time: 0.090s
+The 4-th R*-Tree has been built. Elapsed time: 0.077s
+BUILDING TIME: 0.43267s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    10.0126ms.
+
+TOTAL QUERY TIME:    1001.26ms.
+
+AVG RECALL:        0.5564
+AVG MAP:        0.498626
+5564 10000 100
+AVG RATIO:         2.1927e+34
+AVG COST:          0.0623822
+AVG ROUNDS:        26.62
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.228007s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000345s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.421839s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.088s
+The 1-th R*-Tree has been built. Elapsed time: 0.098s
+The 2-th R*-Tree has been built. Elapsed time: 0.097s
+The 3-th R*-Tree has been built. Elapsed time: 0.095s
+The 4-th R*-Tree has been built. Elapsed time: 0.093s
+The 5-th R*-Tree has been built. Elapsed time: 0.095s
+The 6-th R*-Tree has been built. Elapsed time: 0.090s
+The 7-th R*-Tree has been built. Elapsed time: 0.093s
+The 8-th R*-Tree has been built. Elapsed time: 0.090s
+The 9-th R*-Tree has been built. Elapsed time: 0.085s
+BUILDING TIME: 0.92508s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    14.5092ms.
+
+TOTAL QUERY TIME:    1450.92ms.
+
+AVG RECALL:        0.6993
+AVG MAP:        0.628103
+6993 10000 100
+AVG RATIO:         1.003
+AVG COST:          0.100619
+AVG ROUNDS:        14.93
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.220414s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000516s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.639219s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.097s
+The 1-th R*-Tree has been built. Elapsed time: 0.094s
+The 2-th R*-Tree has been built. Elapsed time: 0.094s
+The 3-th R*-Tree has been built. Elapsed time: 0.094s
+The 4-th R*-Tree has been built. Elapsed time: 0.090s
+The 5-th R*-Tree has been built. Elapsed time: 0.092s
+The 6-th R*-Tree has been built. Elapsed time: 0.085s
+The 7-th R*-Tree has been built. Elapsed time: 0.088s
+The 8-th R*-Tree has been built. Elapsed time: 0.085s
+The 9-th R*-Tree has been built. Elapsed time: 0.100s
+The 10-th R*-Tree has been built. Elapsed time: 0.094s
+The 11-th R*-Tree has been built. Elapsed time: 0.094s
+The 12-th R*-Tree has been built. Elapsed time: 0.094s
+The 13-th R*-Tree has been built. Elapsed time: 0.094s
+The 14-th R*-Tree has been built. Elapsed time: 0.096s
+BUILDING TIME: 1.39112s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    17.3756ms.
+
+TOTAL QUERY TIME:    1737.56ms.
+
+AVG RECALL:        0.7064
+AVG MAP:        0.639398
+7064 10000 100
+AVG RATIO:         1.0028
+AVG COST:          0.100619
+AVG ROUNDS:        14.83
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.227445s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00021s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.24422s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.101s
+The 1-th R*-Tree has been built. Elapsed time: 0.102s
+The 2-th R*-Tree has been built. Elapsed time: 0.103s
+The 3-th R*-Tree has been built. Elapsed time: 0.103s
+The 4-th R*-Tree has been built. Elapsed time: 0.106s
+BUILDING TIME: 0.514905s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    11.3592ms.
+
+TOTAL QUERY TIME:    1135.92ms.
+
+AVG RECALL:        0.6899
+AVG MAP:        0.618288
+6899 10000 100
+AVG RATIO:         1.00582
+AVG COST:          0.100619
+AVG ROUNDS:        15.32
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.225654s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00025s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.278958s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.098s
+The 1-th R*-Tree has been built. Elapsed time: 0.103s
+The 2-th R*-Tree has been built. Elapsed time: 0.106s
+The 3-th R*-Tree has been built. Elapsed time: 0.106s
+The 4-th R*-Tree has been built. Elapsed time: 0.107s
+BUILDING TIME: 0.520033s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    12.8623ms.
+
+TOTAL QUERY TIME:    1286.23ms.
+
+AVG RECALL:        0.7107
+AVG MAP:        0.642334
+7107 10000 100
+AVG RATIO:         1.00342
+AVG COST:          0.100619
+AVG ROUNDS:        15.55
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.215861s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00018s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.214111s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.077s
+The 1-th R*-Tree has been built. Elapsed time: 0.077s
+The 2-th R*-Tree has been built. Elapsed time: 0.077s
+The 3-th R*-Tree has been built. Elapsed time: 0.078s
+The 4-th R*-Tree has been built. Elapsed time: 0.078s
+BUILDING TIME: 0.387481s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    10.529ms.
+
+TOTAL QUERY TIME:    1052.9ms.
+
+AVG RECALL:        0.6799
+AVG MAP:        0.610107
+6799 10000 100
+AVG RATIO:         1.00476
+AVG COST:          0.100619
+AVG ROUNDS:        8.91
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.204169s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000181s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.212428s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.078s
+The 1-th R*-Tree has been built. Elapsed time: 0.078s
+The 2-th R*-Tree has been built. Elapsed time: 0.100s
+The 3-th R*-Tree has been built. Elapsed time: 0.093s
+The 4-th R*-Tree has been built. Elapsed time: 0.093s
+BUILDING TIME: 0.441204s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    9.80067ms.
+
+TOTAL QUERY TIME:    980.067ms.
+
+AVG RECALL:        0.6674
+AVG MAP:        0.589767
+6674 10000 100
+AVG RATIO:         1.0043
+AVG COST:          0.100619
+AVG ROUNDS:        6.33
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.192111s.
+
+LOADING BENMARK...
+LOADING TIME: 2.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000182s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.212297s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.085s
+The 1-th R*-Tree has been built. Elapsed time: 0.082s
+The 2-th R*-Tree has been built. Elapsed time: 0.077s
+The 3-th R*-Tree has been built. Elapsed time: 0.078s
+The 4-th R*-Tree has been built. Elapsed time: 0.094s
+BUILDING TIME: 0.417044s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    14.0451ms.
+
+TOTAL QUERY TIME:    1404.51ms.
+
+AVG RECALL:        0.6952
+AVG MAP:        0.630884
+6952 10000 100
+AVG RATIO:         1.00332
+AVG COST:          0.100619
+AVG ROUNDS:        16.62
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    300
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.213091s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000182s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.209621s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.079s
+The 1-th R*-Tree has been built. Elapsed time: 0.093s
+The 2-th R*-Tree has been built. Elapsed time: 0.093s
+The 3-th R*-Tree has been built. Elapsed time: 0.096s
+The 4-th R*-Tree has been built. Elapsed time: 0.098s
+BUILDING TIME: 0.459798s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    7.40039ms.
+
+TOTAL QUERY TIME:    740.039ms.
+
+AVG RECALL:        0.4283
+AVG MAP:        0.396579
+4283 10000 100
+AVG RATIO:         1.23835
+AVG COST:          0.100619
+AVG ROUNDS:        1.82
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    600
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.214582s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000185s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.211183s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.078s
+The 1-th R*-Tree has been built. Elapsed time: 0.079s
+The 2-th R*-Tree has been built. Elapsed time: 0.080s
+The 3-th R*-Tree has been built. Elapsed time: 0.097s
+The 4-th R*-Tree has been built. Elapsed time: 0.098s
+BUILDING TIME: 0.432007s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    6.42875ms.
+
+TOTAL QUERY TIME:    642.875ms.
+
+AVG RECALL:        0.3349
+AVG MAP:        0.29932
+3349 10000 100
+AVG RATIO:         1.33802
+AVG COST:          0.100619
+AVG ROUNDS:        1.29
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.215098s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000344s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.435144s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.080s
+The 1-th R*-Tree has been built. Elapsed time: 0.095s
+The 2-th R*-Tree has been built. Elapsed time: 0.096s
+The 3-th R*-Tree has been built. Elapsed time: 0.092s
+The 4-th R*-Tree has been built. Elapsed time: 0.094s
+The 5-th R*-Tree has been built. Elapsed time: 0.094s
+The 6-th R*-Tree has been built. Elapsed time: 0.101s
+The 7-th R*-Tree has been built. Elapsed time: 0.101s
+The 8-th R*-Tree has been built. Elapsed time: 0.102s
+The 9-th R*-Tree has been built. Elapsed time: 0.101s
+BUILDING TIME: 0.957112s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    14.5009ms.
+
+TOTAL QUERY TIME:    1450.09ms.
+
+AVG RECALL:        0.7109
+AVG MAP:        0.645662
+7109 10000 100
+AVG RATIO:         1.00291
+AVG COST:          0.100619
+AVG ROUNDS:        8.66
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.21586s.
+
+LOADING BENMARK...
+LOADING TIME: 2.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000515s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.638464s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.083s
+The 1-th R*-Tree has been built. Elapsed time: 0.079s
+The 2-th R*-Tree has been built. Elapsed time: 0.090s
+The 3-th R*-Tree has been built. Elapsed time: 0.088s
+The 4-th R*-Tree has been built. Elapsed time: 0.079s
+The 5-th R*-Tree has been built. Elapsed time: 0.080s
+The 6-th R*-Tree has been built. Elapsed time: 0.079s
+The 7-th R*-Tree has been built. Elapsed time: 0.093s
+The 8-th R*-Tree has been built. Elapsed time: 0.093s
+The 9-th R*-Tree has been built. Elapsed time: 0.093s
+The 10-th R*-Tree has been built. Elapsed time: 0.093s
+The 11-th R*-Tree has been built. Elapsed time: 0.092s
+The 12-th R*-Tree has been built. Elapsed time: 0.093s
+The 13-th R*-Tree has been built. Elapsed time: 0.096s
+The 14-th R*-Tree has been built. Elapsed time: 0.093s
+BUILDING TIME: 1.32245s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    17.8389ms.
+
+TOTAL QUERY TIME:    1783.89ms.
+
+AVG RECALL:        0.7123
+AVG MAP:        0.647307
+7123 10000 100
+AVG RATIO:         1.00255
+AVG COST:          0.100619
+AVG ROUNDS:        8.56
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.195569s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000214s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.243571s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.086s
+The 1-th R*-Tree has been built. Elapsed time: 0.083s
+The 2-th R*-Tree has been built. Elapsed time: 0.099s
+The 3-th R*-Tree has been built. Elapsed time: 0.099s
+The 4-th R*-Tree has been built. Elapsed time: 0.099s
+BUILDING TIME: 0.465934s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    11.2788ms.
+
+TOTAL QUERY TIME:    1127.88ms.
+
+AVG RECALL:        0.7032
+AVG MAP:        0.640107
+7032 10000 100
+AVG RATIO:         1.00374
+AVG COST:          0.100619
+AVG ROUNDS:        9.01
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for vcseis ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/vcseis/
+N=    160178
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.214285s.
+
+LOADING BENMARK...
+LOADING TIME: 2.8e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000246s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.279372s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.085s
+The 1-th R*-Tree has been built. Elapsed time: 0.101s
+The 2-th R*-Tree has been built. Elapsed time: 0.104s
+The 3-th R*-Tree has been built. Elapsed time: 0.102s
+The 4-th R*-Tree has been built. Elapsed time: 0.105s
+BUILDING TIME: 0.496721s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    12.9008ms.
+
+TOTAL QUERY TIME:    1290.08ms.
+
+AVG RECALL:        0.6995
+AVG MAP:        0.630029
+6995 10000 100
+AVG RATIO:         1.00613
+AVG COST:          0.100619
+AVG ROUNDS:        9.31
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.672993s.
+
+LOADING BENMARK...
+LOADING TIME: 3.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000191s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.680494s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.496s
+The 1-th R*-Tree has been built. Elapsed time: 0.489s
+The 2-th R*-Tree has been built. Elapsed time: 0.507s
+The 3-th R*-Tree has been built. Elapsed time: 0.491s
+The 4-th R*-Tree has been built. Elapsed time: 0.478s
+BUILDING TIME: 2.46064s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    35.6763ms.
+
+TOTAL QUERY TIME:    3567.63ms.
+
+AVG RECALL:        0.5613
+AVG MAP:        0.4071
+5613 10000 100
+AVG RATIO:         1.01206
+AVG COST:          0.100191
+AVG ROUNDS:        12.04
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.643114s.
+
+LOADING BENMARK...
+LOADING TIME: 3.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000184s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.681957s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.494s
+The 1-th R*-Tree has been built. Elapsed time: 0.515s
+The 2-th R*-Tree has been built. Elapsed time: 0.549s
+The 3-th R*-Tree has been built. Elapsed time: 0.552s
+The 4-th R*-Tree has been built. Elapsed time: 0.533s
+BUILDING TIME: 2.64193s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    35.5646ms.
+
+TOTAL QUERY TIME:    3556.46ms.
+
+AVG RECALL:        0.4318
+AVG MAP:        0.3328
+4318 10000 100
+AVG RATIO:         1.56953e+34
+AVG COST:          0.0634685
+AVG ROUNDS:        27.44
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.611438s.
+
+LOADING BENMARK...
+LOADING TIME: 3.3e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000351s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.35566s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.500s
+The 1-th R*-Tree has been built. Elapsed time: 0.484s
+The 2-th R*-Tree has been built. Elapsed time: 0.485s
+The 3-th R*-Tree has been built. Elapsed time: 0.440s
+The 4-th R*-Tree has been built. Elapsed time: 0.461s
+The 5-th R*-Tree has been built. Elapsed time: 0.456s
+The 6-th R*-Tree has been built. Elapsed time: 0.460s
+The 7-th R*-Tree has been built. Elapsed time: 0.461s
+The 8-th R*-Tree has been built. Elapsed time: 0.463s
+The 9-th R*-Tree has been built. Elapsed time: 0.458s
+BUILDING TIME: 4.6671s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    45.5553ms.
+
+TOTAL QUERY TIME:    4555.53ms.
+
+AVG RECALL:        0.6245
+AVG MAP:        0.488618
+6245 10000 100
+AVG RATIO:         8.86947e+30
+AVG COST:          0.0981874
+AVG ROUNDS:        16.51
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.678047s.
+
+LOADING BENMARK...
+LOADING TIME: 3.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000513s.
+
+COMPUTING HASH...
+COMPUTING TIME: 2.11301s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.483s
+The 1-th R*-Tree has been built. Elapsed time: 0.455s
+The 2-th R*-Tree has been built. Elapsed time: 0.463s
+The 3-th R*-Tree has been built. Elapsed time: 0.463s
+The 4-th R*-Tree has been built. Elapsed time: 0.474s
+The 5-th R*-Tree has been built. Elapsed time: 0.458s
+The 6-th R*-Tree has been built. Elapsed time: 0.457s
+The 7-th R*-Tree has been built. Elapsed time: 0.501s
+The 8-th R*-Tree has been built. Elapsed time: 0.473s
+The 9-th R*-Tree has been built. Elapsed time: 0.456s
+The 10-th R*-Tree has been built. Elapsed time: 0.462s
+The 11-th R*-Tree has been built. Elapsed time: 0.457s
+The 12-th R*-Tree has been built. Elapsed time: 0.453s
+The 13-th R*-Tree has been built. Elapsed time: 0.455s
+The 14-th R*-Tree has been built. Elapsed time: 0.457s
+BUILDING TIME: 6.96923s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    55.5524ms.
+
+TOTAL QUERY TIME:    5555.25ms.
+
+AVG RECALL:        0.622
+AVG MAP:        0.488449
+6220 10000 100
+AVG RATIO:         8.48146e+30
+AVG COST:          0.0981875
+AVG ROUNDS:        16.33
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.590655s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000215s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.787496s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.450s
+The 1-th R*-Tree has been built. Elapsed time: 0.460s
+The 2-th R*-Tree has been built. Elapsed time: 0.471s
+The 3-th R*-Tree has been built. Elapsed time: 0.459s
+The 4-th R*-Tree has been built. Elapsed time: 0.474s
+BUILDING TIME: 2.31369s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    37.4786ms.
+
+TOTAL QUERY TIME:    3747.86ms.
+
+AVG RECALL:        0.5864
+AVG MAP:        0.450466
+5864 10000 100
+AVG RATIO:         1.09714e+31
+AVG COST:          0.0981869
+AVG ROUNDS:        16.97
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    0.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.529287s.
+
+LOADING BENMARK...
+LOADING TIME: 3.7e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000254s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.904928s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.471s
+The 1-th R*-Tree has been built. Elapsed time: 0.507s
+The 2-th R*-Tree has been built. Elapsed time: 0.477s
+The 3-th R*-Tree has been built. Elapsed time: 0.469s
+The 4-th R*-Tree has been built. Elapsed time: 0.478s
+BUILDING TIME: 2.40241s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    61.9551ms.
+
+TOTAL QUERY TIME:    6195.51ms.
+
+AVG RECALL:        0.6059
+AVG MAP:        0.468627
+6059 10000 100
+AVG RATIO:         1.09714e+31
+AVG COST:          0.0981869
+AVG ROUNDS:        17.11
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.528142s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000184s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.677516s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.440s
+The 1-th R*-Tree has been built. Elapsed time: 0.447s
+The 2-th R*-Tree has been built. Elapsed time: 0.470s
+The 3-th R*-Tree has been built. Elapsed time: 0.492s
+The 4-th R*-Tree has been built. Elapsed time: 0.520s
+BUILDING TIME: 2.36978s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    37.8524ms.
+
+TOTAL QUERY TIME:    3785.24ms.
+
+AVG RECALL:        0.6146
+AVG MAP:        0.460004
+6146 10000 100
+AVG RATIO:         1.01177
+AVG COST:          0.100191
+AVG ROUNDS:        10.55
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.75
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.708498s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000186s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.679848s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.446s
+The 1-th R*-Tree has been built. Elapsed time: 0.452s
+The 2-th R*-Tree has been built. Elapsed time: 0.458s
+The 3-th R*-Tree has been built. Elapsed time: 0.448s
+The 4-th R*-Tree has been built. Elapsed time: 0.466s
+BUILDING TIME: 2.27107s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    31.043ms.
+
+TOTAL QUERY TIME:    3104.3ms.
+
+AVG RECALL:        0.5824
+AVG MAP:        0.428561
+5824 10000 100
+AVG RATIO:         1.0132
+AVG COST:          0.100191
+AVG ROUNDS:        7.51
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.25
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.5245s.
+
+LOADING BENMARK...
+LOADING TIME: 4.3e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000182s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.68856s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.466s
+The 1-th R*-Tree has been built. Elapsed time: 0.476s
+The 2-th R*-Tree has been built. Elapsed time: 0.520s
+The 3-th R*-Tree has been built. Elapsed time: 0.499s
+The 4-th R*-Tree has been built. Elapsed time: 0.510s
+BUILDING TIME: 2.47072s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    43.9197ms.
+
+TOTAL QUERY TIME:    4391.97ms.
+
+AVG RECALL:        0.5738
+AVG MAP:        0.43695
+5738 10000 100
+AVG RATIO:         3.51492e+32
+AVG COST:          0.0873941
+AVG ROUNDS:        18.55
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    300
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.607047s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000185s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.681814s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.484s
+The 1-th R*-Tree has been built. Elapsed time: 0.494s
+The 2-th R*-Tree has been built. Elapsed time: 0.494s
+The 3-th R*-Tree has been built. Elapsed time: 0.596s
+The 4-th R*-Tree has been built. Elapsed time: 0.705s
+BUILDING TIME: 2.77279s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    44.1858ms.
+
+TOTAL QUERY TIME:    4418.58ms.
+
+AVG RECALL:        0.2762
+AVG MAP:        0.177694
+2762 10000 100
+AVG RATIO:         1.21048
+AVG COST:          0.100191
+AVG ROUNDS:        2.98
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        10
+beta=     0.1
+R_min=    600
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.586206s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000195s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.683127s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.475s
+The 1-th R*-Tree has been built. Elapsed time: 0.510s
+The 2-th R*-Tree has been built. Elapsed time: 0.482s
+The 3-th R*-Tree has been built. Elapsed time: 0.511s
+The 4-th R*-Tree has been built. Elapsed time: 0.529s
+BUILDING TIME: 2.50686s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    27.1424ms.
+
+TOTAL QUERY TIME:    2714.24ms.
+
+AVG RECALL:        0.2069
+AVG MAP:        0.131213
+2069 10000 100
+AVG RATIO:         1.45659
+AVG COST:          0.100191
+AVG ROUNDS:        2.39
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        10
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.692714s.
+
+LOADING BENMARK...
+LOADING TIME: 3.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00035s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.36786s.
+
+BUILDING INDEX...
+THERE ARE 10 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.480s
+The 1-th R*-Tree has been built. Elapsed time: 0.492s
+The 2-th R*-Tree has been built. Elapsed time: 0.526s
+The 3-th R*-Tree has been built. Elapsed time: 0.503s
+The 4-th R*-Tree has been built. Elapsed time: 0.545s
+The 5-th R*-Tree has been built. Elapsed time: 0.502s
+The 6-th R*-Tree has been built. Elapsed time: 0.467s
+The 7-th R*-Tree has been built. Elapsed time: 0.462s
+The 8-th R*-Tree has been built. Elapsed time: 0.482s
+The 9-th R*-Tree has been built. Elapsed time: 0.479s
+BUILDING TIME: 4.93855s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    54.4452ms.
+
+TOTAL QUERY TIME:    5444.52ms.
+
+AVG RECALL:        0.6384
+AVG MAP:        0.49874
+6384 10000 100
+AVG RATIO:         1.01045
+AVG COST:          0.100191
+AVG ROUNDS:        10.21
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        15
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.498784s.
+
+LOADING BENMARK...
+LOADING TIME: 3.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000531s.
+
+COMPUTING HASH...
+COMPUTING TIME: 2.10267s.
+
+BUILDING INDEX...
+THERE ARE 15 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.549s
+The 1-th R*-Tree has been built. Elapsed time: 0.505s
+The 2-th R*-Tree has been built. Elapsed time: 0.527s
+The 3-th R*-Tree has been built. Elapsed time: 0.513s
+The 4-th R*-Tree has been built. Elapsed time: 0.484s
+The 5-th R*-Tree has been built. Elapsed time: 0.463s
+The 6-th R*-Tree has been built. Elapsed time: 0.481s
+The 7-th R*-Tree has been built. Elapsed time: 0.465s
+The 8-th R*-Tree has been built. Elapsed time: 0.595s
+The 9-th R*-Tree has been built. Elapsed time: 0.483s
+The 10-th R*-Tree has been built. Elapsed time: 0.504s
+The 11-th R*-Tree has been built. Elapsed time: 0.500s
+The 12-th R*-Tree has been built. Elapsed time: 0.465s
+The 13-th R*-Tree has been built. Elapsed time: 0.522s
+The 14-th R*-Tree has been built. Elapsed time: 0.480s
+BUILDING TIME: 7.53463s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    61.5445ms.
+
+TOTAL QUERY TIME:    6154.45ms.
+
+AVG RECALL:        0.6262
+AVG MAP:        0.491864
+6262 10000 100
+AVG RATIO:         1.01051
+AVG COST:          0.100191
+AVG ROUNDS:        10.04
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.720866s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000218s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.7979s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.490s
+The 1-th R*-Tree has been built. Elapsed time: 0.476s
+The 2-th R*-Tree has been built. Elapsed time: 0.472s
+The 3-th R*-Tree has been built. Elapsed time: 0.625s
+The 4-th R*-Tree has been built. Elapsed time: 0.670s
+BUILDING TIME: 2.73272s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    50.3876ms.
+
+TOTAL QUERY TIME:    5038.76ms.
+
+AVG RECALL:        0.5881
+AVG MAP:        0.439455
+5881 10000 100
+AVG RATIO:         1.01081
+AVG COST:          0.100191
+AVG ROUNDS:        10.72
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for txed ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/txed/
+N=    519589
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.647646s.
+
+LOADING BENMARK...
+LOADING TIME: 3.5e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000263s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.906876s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.463s
+The 1-th R*-Tree has been built. Elapsed time: 0.461s
+The 2-th R*-Tree has been built. Elapsed time: 0.466s
+The 3-th R*-Tree has been built. Elapsed time: 0.468s
+The 4-th R*-Tree has been built. Elapsed time: 0.476s
+BUILDING TIME: 2.3344s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    42.9427ms.
+
+TOTAL QUERY TIME:    4294.27ms.
+
+AVG RECALL:        0.598
+AVG MAP:        0.448814
+5980 10000 100
+AVG RATIO:         1.01074
+AVG COST:          0.100191
+AVG ROUNDS:        10.77
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

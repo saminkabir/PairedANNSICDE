@@ -1,0 +1,1276 @@
+diff --git a/cmake/FindAVX.cmake b/cmake/FindAVX.cmake
+index 70a2128..2f2b5da 100644
+--- a/cmake/FindAVX.cmake
++++ b/cmake/FindAVX.cmake
+@@ -1,5 +1,9 @@
+ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+ 
++# FLATNAV_ENABLE_AVX512=OFF (default) builds the AVX2 kernels even on CPUs that
++# support AVX-512; set it to ON to restore the previous auto-detected AVX-512.
++option(FLATNAV_ENABLE_AVX512 "Compile FlatNav with AVX-512 when the CPU supports it" OFF)
++
+ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+   execute_process(COMMAND cat /proc/cpuinfo OUTPUT_VARIABLE CPUINFO OUTPUT_STRIP_TRAILING_WHITESPACE)
+ 
+@@ -25,13 +29,16 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+   endif()
+ 
+   if(AVX2_FOUND GREATER -1)
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2 -mfma")
+     message(STATUS "Building with AVX2")
+   endif()
+ 
+-  if(AVX512_FOUND GREATER -1)
++  if(AVX512_FOUND GREATER -1 AND FLATNAV_ENABLE_AVX512)
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx512f -mavx512dq -mavx512vl -mavx512bw -mavx512vnni")
+     message(STATUS "Building with AVX512")
++  elseif(AVX512_FOUND GREATER -1)
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-avx512f")
++    message(STATUS "AVX512 available but disabled (FLATNAV_ENABLE_AVX512=OFF): using AVX2")
+   endif()
+ 
+ elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+diff --git a/include/flatnav/index/Index.h b/include/flatnav/index/Index.h
+index 34a08b1..cf3ab87 100644
+--- a/include/flatnav/index/Index.h
++++ b/include/flatnav/index/Index.h
+@@ -23,6 +23,8 @@
+ #include <utility>
+ #include <vector>
+ #include <optional>
++#include <stdexcept>
++#include <string>
+ 
+ using flatnav::distances::DistanceInterface;
+ using flatnav::util::VisitedSet;
+@@ -31,6 +33,32 @@ using flatnav::util::DataType;
+ 
+ namespace flatnav {
+ 
++/**
++ * @brief Describes a row-major vector buffer owned by someone else (e.g. the
++ * `codes` of a faiss::IndexFlat, reachable via IndexFlat::get_xb()).
++ *
++ * When an Index is constructed with an ExternalVectorStorage, it does NOT copy
++ * vectors into its own memory. Each node block then holds only
++ * ([M links] [label]) and node `i` reads its vector from row `i` of this
++ * buffer. The buffer must already contain the vectors in FlatNav's internal
++ * format (for float32 L2 / inner product that is just the raw floats, which is
++ * exactly what faiss::IndexFlatL2 / IndexFlatIP store).
++ *
++ * Lifetime: the owner of the buffer must outlive the Index, and must not
++ * reallocate it (e.g. by calling faiss::IndexFlat::add()) while the Index is in
++ * use. If the buffer grows, call Index::attachExternalStorage() again with the
++ * new pointer before the next add/search.
++ */
++struct ExternalVectorStorage {
++  const void* data = nullptr;
++  // Number of rows currently present in the buffer.
++  size_t num_vectors = 0;
++  // Bytes per row. 0 means "same as the distance's dataSize()". If non-zero
++  // it must equal dataSize(); this catches attaching a float buffer to an
++  // int8/uint8/scalar-quantized index.
++  size_t row_stride_bytes = 0;
++};
++
+ // dist_t: A distance function implementing DistanceInterface.
+ // label_t: A fixed-width data type for the label (meta-data) of each point.
+ template <typename dist_t, typename label_t>
+@@ -83,6 +111,17 @@ class Index {
+   mutable std::atomic<uint64_t> _distance_computations = 0;
+   mutable std::atomic<uint64_t> _metric_hops = 0;
+ 
++  // ---- External (shared) vector storage ----
++  // If true, vectors live in an external buffer (see ExternalVectorStorage)
++  // and the node layout is ([M links] [label]) instead of
++  // ([data] [M links] [label]). Node id `i` <=> external row `i`.
++  bool _external_storage = false;
++  const char* _external_data = nullptr;
++  size_t _external_num_vectors = 0;
++  // Byte offset of the links inside a node block: _data_size_bytes for owned
++  // storage, 0 for external storage.
++  size_t _links_offset = 0;
++
+   Index(const Index&) = delete;
+   Index& operator=(const Index&) = delete;
+ 
+@@ -102,9 +141,16 @@ class Index {
+         _distance(std::move(other._distance)),
+         _num_threads(other._num_threads),
+         _visited_set_pool(std::move(other._visited_set_pool)),
+-        _node_links_mutexes(std::move(other._node_links_mutexes)) {
++        _node_links_mutexes(std::move(other._node_links_mutexes)),
++        _collect_stats(other._collect_stats),
++        _data_type(other._data_type),
++        _external_storage(other._external_storage),
++        _external_data(other._external_data),
++        _external_num_vectors(other._external_num_vectors),
++        _links_offset(other._links_offset) {
+     other._index_memory = nullptr;
+     other._visited_set_pool = nullptr;
++    other._external_data = nullptr;
+   }
+ 
+   Index& operator=(Index&& other) noexcept {
+@@ -122,9 +168,16 @@ class Index {
+       _num_threads = other._num_threads;
+       _visited_set_pool = std::move(other._visited_set_pool);
+       _node_links_mutexes = std::move(other._node_links_mutexes);
++      _collect_stats = other._collect_stats;
++      _data_type = other._data_type;
++      _external_storage = other._external_storage;
++      _external_data = other._external_data;
++      _external_num_vectors = other._external_num_vectors;
++      _links_offset = other._links_offset;
+ 
+       other._index_memory = nullptr;
+       other._visited_set_pool = nullptr;
++      other._external_data = nullptr;
+     }
+     return *this;
+   }
+@@ -156,24 +209,30 @@ class Index {
+    */
+   Index(std::unique_ptr<DistanceInterface<dist_t>> dist, int dataset_size, int max_edges_per_node,
+         bool collect_stats = false, DataType data_type = DataType::float32)
+-      : _M(max_edges_per_node),
+-        _max_node_count(dataset_size),
+-        _cur_num_nodes(0),
+-        _distance(std::move(dist)),
+-        _num_threads(1),
+-        _visited_set_pool(new VisitedSetPool(
+-            /* initial_pool_size = */ 1,
+-            /* num_elements = */ dataset_size)),
+-        _node_links_mutexes(dataset_size),
+-        _collect_stats(collect_stats), _data_type(data_type) {
++      : Index(std::move(dist), dataset_size, max_edges_per_node, collect_stats, data_type,
++              /* external_storage = */ false) {}
+ 
+-    // Get the size in bytes of the _node_links_mutexes vector.
+-    size_t mutexes_size_bytes = _node_links_mutexes.size() * sizeof(std::mutex);
+-
+-    _data_size_bytes = _distance->dataSize();
+-    _node_size_bytes = _data_size_bytes + (sizeof(node_id_t) * _M) + sizeof(label_t);
+-    uint64_t index_size = static_cast<uint64_t>(_node_size_bytes) * static_cast<uint64_t>(_max_node_count);
+-    _index_memory = new char[index_size];
++  /**
++   * @brief Construct an Index whose vectors live in an external buffer
++   * (shared storage), e.g. the storage of a faiss::IndexFlatL2 that Faiss
++   * HNSW / NSG indexes are also built on.
++   *
++   * Only the graph (M links + label per node) is allocated by FlatNav. Build
++   * the graph with addFromStorage(); node id `i` is always storage row `i`,
++   * so FlatNav ids and Faiss ids coincide.
++   *
++   * @param dist            Distance. Its dataSize() must equal the storage row
++   *                        size (float32 L2 / IP <=> faiss IndexFlatL2 / IP).
++   * @param dataset_size    Max number of nodes (usually storage.ntotal).
++   * @param max_edges_per_node  M.
++   * @param storage         The external buffer (see ExternalVectorStorage).
++   */
++  Index(std::unique_ptr<DistanceInterface<dist_t>> dist, int dataset_size, int max_edges_per_node,
++        const ExternalVectorStorage& storage, bool collect_stats = false,
++        DataType data_type = DataType::float32)
++      : Index(std::move(dist), dataset_size, max_edges_per_node, collect_stats, data_type,
++              /* external_storage = */ true) {
++    attachExternalStorage(storage);
+   }
+ 
+   ~Index() {
+@@ -181,6 +240,99 @@ class Index {
+     delete _visited_set_pool;
+   }
+ 
++  /**
++   * @brief (Re)attach the external vector buffer. Required after loadIndex()
++   * of an index that was saved in external-storage mode, and whenever the
++   * owner of the buffer may have reallocated it (e.g. faiss IndexFlat::add()).
++   */
++  void attachExternalStorage(const ExternalVectorStorage& storage) {
++    if (!_external_storage) {
++      throw std::logic_error(
++          "attachExternalStorage(): this index owns its vectors. Construct it with an "
++          "ExternalVectorStorage to share storage.");
++    }
++    if (storage.data == nullptr) {
++      throw std::invalid_argument("attachExternalStorage(): storage.data is null.");
++    }
++    if (storage.row_stride_bytes != 0 && storage.row_stride_bytes != _data_size_bytes) {
++      throw std::invalid_argument(
++          "attachExternalStorage(): storage row size is " + std::to_string(storage.row_stride_bytes) +
++          " bytes but this index expects " + std::to_string(_data_size_bytes) +
++          " bytes per vector (dim * sizeof(element)). Shared storage only works when the "
++          "storage format equals FlatNav's internal format (e.g. float32 IndexFlat + float32 "
++          "L2/IP index; not scalar-quantized).");
++    }
++    if (storage.num_vectors < _cur_num_nodes) {
++      throw std::invalid_argument("attachExternalStorage(): storage has " +
++                                  std::to_string(storage.num_vectors) + " rows but the graph already has " +
++                                  std::to_string(_cur_num_nodes) + " nodes.");
++    }
++    _external_data = static_cast<const char*>(storage.data);
++    _external_num_vectors = storage.num_vectors;
++  }
++
++  inline bool usesExternalStorage() const { return _external_storage; }
++  inline const void* externalStorageData() const { return _external_data; }
++  inline size_t externalStorageNumVectors() const { return _external_num_vectors; }
++
++  /**
++   * @brief Build the graph over external storage rows
++   * [currentNumNodes(), currentNumNodes() + num_vectors).
++   *
++   * Same construction algorithm as addBatch(), but no vector is copied: each
++   * worker claims the next storage row under the global lock, so node id ==
++   * storage row even with multiple threads.
++   *
++   * @param num_vectors     Number of storage rows to insert.
++   * @param ef_construction Beam width during construction.
++   * @param num_initializations Number of entry-point samples (> 0).
++   * @param labels          Optional labels (size num_vectors). If empty, the
++   *                        label of node i is i (== the Faiss id).
++   */
++  void addFromStorage(size_t num_vectors, int ef_construction, int num_initializations = 100,
++                      const std::vector<label_t>& labels = {}) {
++    if (!_external_storage) {
++      throw std::logic_error("addFromStorage() requires an index constructed with ExternalVectorStorage.");
++    }
++    if (_external_data == nullptr) {
++      throw std::logic_error("addFromStorage(): no external storage attached.");
++    }
++    if (num_initializations <= 0) {
++      throw std::invalid_argument("num_initializations must be greater than 0.");
++    }
++    const size_t first_id = _cur_num_nodes;
++    const size_t end_id = first_id + num_vectors;
++    if (end_id > _external_num_vectors) {
++      throw std::invalid_argument("addFromStorage(): requested rows [" + std::to_string(first_id) + ", " +
++                                  std::to_string(end_id) + ") but storage only has " +
++                                  std::to_string(_external_num_vectors) + " rows.");
++    }
++    if (end_id > _max_node_count) {
++      throw std::runtime_error(
++          "Maximum number of nodes reached. Consider increasing the `dataset_size` parameter to "
++          "create a larger index.");
++    }
++    if (!labels.empty() && labels.size() != num_vectors) {
++      throw std::invalid_argument("addFromStorage(): labels.size() must equal num_vectors.");
++    }
++    if (num_vectors == 0) {
++      return;
++    }
++
++    auto insert_one = [&](uint32_t /* unused worker counter */) {
++      this->insertNextStorageNode(static_cast<node_id_t>(first_id), labels, ef_construction,
++                                  num_initializations);
++    };
++
++    if (_num_threads == 1) {
++      for (size_t i = 0; i < num_vectors; i++) {
++        insert_one(static_cast<uint32_t>(i));
++      }
++      return;
++    }
++    flatnav::executeInParallel(/* start_index = */ 0, /* end_index = */ static_cast<uint32_t>(num_vectors),
++                               /* num_threads = */ _num_threads, /* function = */ insert_one);
++  }
+ 
+   void buildGraphLinks(const std::string& mtx_filename) {
+     std::ifstream input_file(mtx_filename);
+@@ -258,6 +410,11 @@ class Index {
+    * @param new_node_id The id of the new node.
+    */
+   void allocateNode(void* data, label_t& label, node_id_t& new_node_id) {
++    if (_external_storage) {
++      throw std::logic_error(
++          "allocateNode(): vectors cannot be copied into an index that uses external storage. "
++          "Add them to the shared storage instead, then call addFromStorage().");
++    }
+     new_node_id = _cur_num_nodes;
+     _distance->transformData(
+         /* destination = */ getNodeData(new_node_id),
+@@ -347,6 +504,13 @@ class Index {
+       if (num_initializations <= 0) {
+           throw std::invalid_argument("num_initializations must be greater than 0.");
+       }
++      if (_external_storage) {
++          // Checked here (not only in add()) because exceptions thrown inside
++          // worker threads would call std::terminate.
++          throw std::logic_error(
++              "addBatch(): this index uses external storage. Add the vectors to the shared "
++              "storage and call addFromStorage() instead.");
++      }
+       uint32_t total_num_nodes = labels.size();
+       uint32_t data_dimension = _distance->dimension();
+ 
+@@ -395,6 +559,9 @@ class Index {
+    * reached.
+    */
+   void add(void* data, label_t& label, int ef_construction, int num_initializations) {
++    if (_external_storage) {
++      throw std::logic_error("add(): this index uses external storage; use addFromStorage().");
++    }
+ 
+     if (_cur_num_nodes >= _max_node_count) {
+       throw std::runtime_error(
+@@ -430,6 +597,9 @@ class Index {
+    */
+   std::vector<dist_label_t> search(const void* query, const int K, int ef_search,
+                                    int num_initializations = 100) {
++    if (_external_storage && _external_data == nullptr) {
++      throw std::logic_error("search(): no external storage attached. Call attachExternalStorage() first.");
++    }
+     node_id_t entry_node = initializeSearch(query, num_initializations);
+     PriorityQueue neighbors = beamSearch(/* query = */ query,
+                                          /* entry_node = */ entry_node,
+@@ -454,6 +624,7 @@ class Index {
+ 
+ 
+   void doGraphReordering(const std::vector<std::string>& reordering_methods) {
++    requireOwnedStorage("doGraphReordering()");
+ 
+     for (const auto& method : reordering_methods) {
+       auto outdegree_table = getGraphOutdegreeTable();
+@@ -471,6 +642,7 @@ class Index {
+   }
+ 
+   void reorderGOrder(const int window_size = 5) {
++    requireOwnedStorage("reorderGOrder()");
+     auto outdegree_table = getGraphOutdegreeTable();
+     std::vector<node_id_t> P = util::gOrder<node_id_t>(outdegree_table, window_size);
+ 
+@@ -478,6 +650,7 @@ class Index {
+   }
+ 
+   void reorderRCM() {
++    requireOwnedStorage("reorderRCM()");
+     auto outdegree_table = getGraphOutdegreeTable();
+     std::vector<node_id_t> P = util::rcmOrder<node_id_t>(outdegree_table);
+     relabel(P);
+@@ -508,6 +681,23 @@ class Index {
+         /* initial_pool_size = */ 1,
+         /* num_elements = */ index->_max_node_count);
+     index->_distance = std::move(dist);
++
++    // Detect the node layout. Old files (and owned-storage indexes) use
++    // ([data] [M links] [label]); external-storage indexes save only
++    // ([M links] [label]). Since _data_size_bytes > 0 these never collide,
++    // so the file format stays backward compatible.
++    const size_t graph_only_node_size = index->_M * sizeof(node_id_t) + sizeof(label_t);
++    if (index->_node_size_bytes == graph_only_node_size) {
++      index->_external_storage = true;
++      index->_links_offset = 0;
++      index->_external_data = nullptr;  // caller must attachExternalStorage()
++    } else if (index->_node_size_bytes == graph_only_node_size + index->_data_size_bytes) {
++      index->_external_storage = false;
++      index->_links_offset = index->_data_size_bytes;
++    } else {
++      throw std::runtime_error("loadIndex(): unrecognized node layout in " + filename);
++    }
++
+     index->_num_threads = std::max((uint32_t)1, (uint32_t)std::thread::hardware_concurrency() / 2);
+     index->_node_links_mutexes = std::vector<std::mutex>(index->_max_node_count);
+ 
+@@ -587,6 +777,11 @@ class Index {
+     std::cout << "node_size_bytes: " << _node_size_bytes << "\n" << std::flush;
+     std::cout << "max_node_count: " << _max_node_count << "\n" << std::flush;
+     std::cout << "cur_num_nodes: " << _cur_num_nodes << "\n" << std::flush;
++    std::cout << "storage: "
++              << (_external_storage ? "external (shared, " + std::to_string(_external_num_vectors) + " rows)"
++                                    : std::string("owned"))
++              << "\n"
++              << std::flush;
+ 
+     _distance->getSummary();
+   }
+@@ -596,21 +791,83 @@ class Index {
+   // Default constructor for cereal
+   Index() = default;
+ 
++  // Common constructor. external_storage selects the node layout.
++  Index(std::unique_ptr<DistanceInterface<dist_t>> dist, int dataset_size, int max_edges_per_node,
++        bool collect_stats, DataType data_type, bool external_storage)
++      : _M(max_edges_per_node),
++        _max_node_count(dataset_size),
++        _cur_num_nodes(0),
++        _distance(std::move(dist)),
++        _num_threads(1),
++        _visited_set_pool(new VisitedSetPool(
++            /* initial_pool_size = */ 1,
++            /* num_elements = */ dataset_size)),
++        _node_links_mutexes(dataset_size),
++        _collect_stats(collect_stats),
++        _data_type(data_type),
++        _external_storage(external_storage) {
++    _data_size_bytes = _distance->dataSize();
++    // Owned:    ([data] [M links] [label])
++    // External: ([M links] [label]) -- data is read from the shared buffer.
++    _links_offset = _external_storage ? 0 : _data_size_bytes;
++    _node_size_bytes = _links_offset + (sizeof(node_id_t) * _M) + sizeof(label_t);
++    uint64_t index_size = static_cast<uint64_t>(_node_size_bytes) * static_cast<uint64_t>(_max_node_count);
++    _index_memory = new char[index_size];
++  }
++
++  void requireOwnedStorage(const char* what) const {
++    if (_external_storage) {
++      throw std::logic_error(std::string(what) +
++                             " is not supported with external storage: it physically moves vectors, "
++                             "which would break the id mapping shared with the other indexes.");
++    }
++  }
++
++  // Inserts the next storage row (id == _cur_num_nodes) into the graph.
++  void insertNextStorageNode(node_id_t first_id, const std::vector<label_t>& labels, int ef_construction,
++                             int num_initializations) {
++    std::unique_lock<std::mutex> global_lock(_index_data_guard);
++    const node_id_t new_node_id = static_cast<node_id_t>(_cur_num_nodes);
++    const void* data = getNodeData(new_node_id);
++    // Entry point is chosen among nodes already in the graph (ids < new_node_id).
++    node_id_t entry_node = initializeSearch(data, num_initializations);
++    *(getNodeLabel(new_node_id)) =
++        labels.empty() ? static_cast<label_t>(new_node_id) : labels[new_node_id - first_id];
++    std::fill_n(getNodeLinks(new_node_id), _M, new_node_id);
++    _cur_num_nodes++;
++    global_lock.unlock();
++
++    if (new_node_id == 0) {
++      return;
++    }
++
++    auto neighbors = beamSearch(/* query = */ data, /* entry_node = */ entry_node,
++                                /* buffer_size = */ ef_construction);
++    int selection_M = std::max(static_cast<int>(_M / 2), 1);
++    selectNeighbors(/* neighbors = */ neighbors, /* M = */ selection_M);
++    connectNeighbors(neighbors, new_node_id);
++  }
++
+   char* getNodeData(const node_id_t& n) const {
++    if (_external_storage) {
++      // Row n of the shared buffer. Never written through in this mode.
++      uint64_t byte_offset = static_cast<uint64_t>(n) * static_cast<uint64_t>(_data_size_bytes);
++      return const_cast<char*>(_external_data) + byte_offset;
++    }
+     uint64_t byte_offset = static_cast<uint64_t>(n) * static_cast<uint64_t>(_node_size_bytes);
+     return _index_memory + byte_offset;
+   }
+ 
+   node_id_t* getNodeLinks(const node_id_t& n) const {
+     uint64_t byte_offset = static_cast<uint64_t>(n) * static_cast<uint64_t>(_node_size_bytes);
+-    byte_offset += _data_size_bytes;
++    byte_offset += _links_offset;
+     char* location = _index_memory + byte_offset;
+     return reinterpret_cast<node_id_t*>(location);
+   }
+ 
+   label_t* getNodeLabel(const node_id_t& n) const {
+     uint64_t byte_offset = static_cast<uint64_t>(n) * static_cast<uint64_t>(_node_size_bytes);
+-    byte_offset += _data_size_bytes;
++    byte_offset += _links_offset;
+     byte_offset += (_M * sizeof(node_id_t));
+     char* location = _index_memory + byte_offset;
+     return reinterpret_cast<label_t*>(location);
+@@ -685,6 +942,10 @@ class Index {
+ #ifdef USE_SSE
+       if (!candidates.empty()) {
+         _mm_prefetch(getNodeData(candidates.top().second), _MM_HINT_T0);
++        if (_external_storage) {
++          // Links are not next to the vector in this layout; fetch them too.
++          _mm_prefetch(reinterpret_cast<const char*>(getNodeLinks(candidates.top().second)), _MM_HINT_T0);
++        }
+         visited_set->prefetch(candidates.top().second);
+       }
+ #endif
+diff --git a/include/flatnav/tests/CMakeLists.txt b/include/flatnav/tests/CMakeLists.txt
+index 6973d1f..d9d3a12 100644
+--- a/include/flatnav/tests/CMakeLists.txt
++++ b/include/flatnav/tests/CMakeLists.txt
+@@ -3,7 +3,7 @@ enable_testing()
+ include(GoogleTest)
+ 
+ # Add test executables here 
+-set(FLAT_NAV_LIB_TESTS test_distances test_serialization test_scalar_quantization)
++set(FLAT_NAV_LIB_TESTS test_distances test_serialization test_scalar_quantization test_external_storage)
+ 
+ foreach(TEST IN LISTS FLAT_NAV_LIB_TESTS)
+   add_executable(${TEST} ${TEST}.cpp)
+diff --git a/include/flatnav/tests/test_external_storage.cpp b/include/flatnav/tests/test_external_storage.cpp
+new file mode 100644
+index 0000000..a683160
+--- /dev/null
++++ b/include/flatnav/tests/test_external_storage.cpp
+@@ -0,0 +1,194 @@
++// Tests for building/searching a FlatNav graph whose vectors live in an
++// external (shared) buffer, e.g. the storage of a faiss::IndexFlatL2.
++#include <flatnav/distances/InnerProductDistance.h>
++#include <flatnav/distances/SquaredL2Distance.h>
++#include <flatnav/index/Index.h>
++#include <algorithm>
++#include <cstdio>
++#include <numeric>
++#include <random>
++#include <unordered_set>
++#include <vector>
++#include "gtest/gtest.h"
++
++using flatnav::ExternalVectorStorage;
++using flatnav::Index;
++using flatnav::distances::SquaredL2Distance;
++using flatnav::util::DataType;
++
++namespace flatnav::testing {
++
++using L2Index = Index<SquaredL2Distance<DataType::float32>, int>;
++
++static const uint32_t N = 5000;
++static const uint32_t NQ = 200;
++static const uint32_t DIM = 32;
++static const uint32_t M = 16;
++static const uint32_t EF_CONSTRUCTION = 100;
++static const uint32_t EF_SEARCH = 64;
++static const uint32_t K = 10;
++
++static std::vector<float> randomVectors(uint32_t n, uint32_t dim, uint32_t seed) {
++  std::mt19937 rng(seed);
++  std::uniform_real_distribution<float> u(0.f, 1.f);
++  std::vector<float> v(static_cast<size_t>(n) * dim);
++  for (auto& x : v) x = u(rng);
++  return v;
++}
++
++static std::vector<std::vector<int>> bruteForce(const std::vector<float>& base, const std::vector<float>& queries,
++                                                uint32_t dim, uint32_t k) {
++  size_t n = base.size() / dim, nq = queries.size() / dim;
++  std::vector<std::vector<int>> gt(nq);
++  for (size_t q = 0; q < nq; q++) {
++    std::vector<std::pair<float, int>> d(n);
++    for (size_t i = 0; i < n; i++) {
++      float s = 0;
++      for (uint32_t j = 0; j < dim; j++) {
++        float t = base[i * dim + j] - queries[q * dim + j];
++        s += t * t;
++      }
++      d[i] = {s, static_cast<int>(i)};
++    }
++    std::partial_sort(d.begin(), d.begin() + k, d.end());
++    for (uint32_t j = 0; j < k; j++) gt[q].push_back(d[j].second);
++  }
++  return gt;
++}
++
++template <typename IndexT>
++static double recall(IndexT& index, const std::vector<float>& queries, const std::vector<std::vector<int>>& gt) {
++  size_t hits = 0;
++  for (size_t q = 0; q < gt.size(); q++) {
++    auto res = index.search(queries.data() + q * DIM, K, EF_SEARCH);
++    std::unordered_set<int> truth(gt[q].begin(), gt[q].end());
++    for (auto& [dist, label] : res) hits += truth.count(label);
++  }
++  return static_cast<double>(hits) / (gt.size() * K);
++}
++
++static std::unique_ptr<L2Index> makeExternal(const std::vector<float>& base) {
++  ExternalVectorStorage storage{base.data(), base.size() / DIM, DIM * sizeof(float)};
++  return std::make_unique<L2Index>(SquaredL2Distance<DataType::float32>::create(DIM), N, M, storage);
++}
++
++TEST(FlatNavExternalStorage, ZeroCopyLayoutAndRecall) {
++  auto base = randomVectors(N, DIM, 1);
++  auto queries = randomVectors(NQ, DIM, 2);
++  auto gt = bruteForce(base, queries, DIM, K);
++
++  auto shared = makeExternal(base);
++  ASSERT_TRUE(shared->usesExternalStorage());
++  ASSERT_EQ(shared->externalStorageData(), static_cast<const void*>(base.data()));
++  // Graph only: M links + 1 label, no vector bytes.
++  ASSERT_EQ(shared->nodeSizeBytes(), 4 * M + 4);
++  shared->addFromStorage(N, EF_CONSTRUCTION);
++  ASSERT_EQ(shared->currentNumNodes(), N);
++
++  // Reference: the normal FlatNav index that copies the vectors.
++  L2Index owned(SquaredL2Distance<DataType::float32>::create(DIM), N, M);
++  std::vector<int> labels(N);
++  std::iota(labels.begin(), labels.end(), 0);
++  owned.addBatch<float>(base.data(), labels, EF_CONSTRUCTION);
++  ASSERT_EQ(owned.nodeSizeBytes(), DIM * sizeof(float) + 4 * M + 4);
++
++  double r_shared = recall(*shared, queries, gt);
++  double r_owned = recall(owned, queries, gt);
++  // Single-threaded construction is deterministic and identical in both modes.
++  EXPECT_DOUBLE_EQ(r_shared, r_owned);
++  EXPECT_GT(r_shared, 0.9);
++}
++
++TEST(FlatNavExternalStorage, ParallelBuildKeepsNodeIdEqualToStorageRow) {
++  auto base = randomVectors(N, DIM, 3);
++  auto shared = makeExternal(base);
++  shared->setNumThreads(std::max(2u, std::min(4u, std::thread::hardware_concurrency())));
++  // Build in two chunks to also exercise incremental addFromStorage.
++  shared->addFromStorage(N / 2, EF_CONSTRUCTION);
++  shared->addFromStorage(N - N / 2, EF_CONSTRUCTION);
++  ASSERT_EQ(shared->currentNumNodes(), N);
++
++  // Searching with storage row i must return label i at distance 0.
++  size_t self_hits = 0;
++  for (uint32_t i = 0; i < N; i += 25) {
++    auto res = shared->search(base.data() + static_cast<size_t>(i) * DIM, 1, EF_SEARCH);
++    ASSERT_FALSE(res.empty());
++    if (res[0].second == static_cast<int>(i)) {
++      EXPECT_FLOAT_EQ(res[0].first, 0.f);
++      self_hits++;
++    }
++  }
++  EXPECT_GE(self_hits, (N / 25) * 0.98);
++}
++
++TEST(FlatNavExternalStorage, CustomLabels) {
++  auto base = randomVectors(N, DIM, 4);
++  auto shared = makeExternal(base);
++  std::vector<int> labels(N);
++  for (uint32_t i = 0; i < N; i++) labels[i] = 1000000 + static_cast<int>(i);
++  shared->addFromStorage(N, EF_CONSTRUCTION, 100, labels);
++  auto res = shared->search(base.data() + 123 * DIM, 1, EF_SEARCH);
++  EXPECT_EQ(res[0].second, 1000123);
++}
++
++TEST(FlatNavExternalStorage, SaveLoadGraphOnlyAndReattach) {
++  auto base = randomVectors(N, DIM, 5);
++  auto queries = randomVectors(NQ, DIM, 6);
++  auto shared = makeExternal(base);
++  shared->addFromStorage(N, EF_CONSTRUCTION);
++
++  const std::string file = "flatnav_external_storage_test.index";
++  shared->saveIndex(file);
++  auto loaded = L2Index::loadIndex(file);
++  std::remove(file.c_str());
++
++  ASSERT_TRUE(loaded->usesExternalStorage());
++  ASSERT_EQ(loaded->nodeSizeBytes(), 4 * M + 4);
++  ASSERT_EQ(loaded->currentNumNodes(), N);
++  EXPECT_THROW(loaded->search(queries.data(), K, EF_SEARCH), std::logic_error);
++
++  // Re-attach to a *different* buffer holding the same vectors (e.g. the
++  // storage of a faiss index read back with faiss::read_index).
++  std::vector<float> base_copy = base;
++  loaded->attachExternalStorage({base_copy.data(), N, DIM * sizeof(float)});
++  for (uint32_t q = 0; q < NQ; q++) {
++    auto a = shared->search(queries.data() + q * DIM, K, EF_SEARCH);
++    auto b = loaded->search(queries.data() + q * DIM, K, EF_SEARCH);
++    ASSERT_EQ(a, b);
++  }
++}
++
++TEST(FlatNavExternalStorage, OwnedIndexStillRoundTrips) {
++  auto base = randomVectors(1000, DIM, 7);
++  L2Index owned(SquaredL2Distance<DataType::float32>::create(DIM), 1000, M);
++  std::vector<int> labels(1000);
++  std::iota(labels.begin(), labels.end(), 0);
++  owned.addBatch<float>(base.data(), labels, EF_CONSTRUCTION);
++  const std::string file = "flatnav_owned_storage_test.index";
++  owned.saveIndex(file);
++  auto loaded = L2Index::loadIndex(file);
++  std::remove(file.c_str());
++  ASSERT_FALSE(loaded->usesExternalStorage());
++  auto a = owned.search(base.data(), K, EF_SEARCH);
++  auto b = loaded->search(base.data(), K, EF_SEARCH);
++  ASSERT_EQ(a, b);
++}
++
++TEST(FlatNavExternalStorage, Guards) {
++  auto base = randomVectors(N, DIM, 8);
++  auto shared = makeExternal(base);
++  std::vector<int> labels(10, 0);
++  EXPECT_THROW(shared->addBatch<float>(base.data(), labels, EF_CONSTRUCTION), std::logic_error);
++  EXPECT_THROW(shared->addFromStorage(N + 1, EF_CONSTRUCTION), std::invalid_argument);
++  // Wrong row size (e.g. attaching a float buffer to a uint8 index).
++  EXPECT_THROW(shared->attachExternalStorage({base.data(), N, DIM}), std::invalid_argument);
++  shared->addFromStorage(100, EF_CONSTRUCTION);
++  EXPECT_THROW(shared->reorderRCM(), std::logic_error);
++  EXPECT_THROW(shared->attachExternalStorage({base.data(), 50, 0}), std::invalid_argument);
++
++  L2Index owned(SquaredL2Distance<DataType::float32>::create(DIM), N, M);
++  EXPECT_THROW(owned.attachExternalStorage({base.data(), N, 0}), std::logic_error);
++  EXPECT_THROW(owned.addFromStorage(10, EF_CONSTRUCTION), std::logic_error);
++}
++
++}  // namespace flatnav::testing
+diff --git a/python-bindings/setup.py b/python-bindings/setup.py
+index f93bf22..ee6ac1b 100644
+--- a/python-bindings/setup.py
++++ b/python-bindings/setup.py
+@@ -10,6 +10,13 @@ package_description_path = os.path.join(
+ with open(package_description_path, "r") as f:
+     package_description = f.read()
+ 
++# SIMD level for the extension: "avx2" (default, no AVX-512) or "native".
++FLATNAV_SIMD = os.environ.get("FLATNAV_SIMD", "avx2").lower()
++if FLATNAV_SIMD not in ("avx2", "native"):
++    raise ValueError(f"FLATNAV_SIMD must be 'avx2' or 'native', got {FLATNAV_SIMD!r}")
++AVX2_COMPILE_ARGS = ["-mavx2", "-mfma", "-mf16c", "-mpopcnt", "-mno-avx512f"]
++
++
+ class UnsupportedPlatformError(Exception):
+     pass
+ 
+@@ -79,9 +86,14 @@ def construct_cmake_args() -> List[str]:
+             "-w",
+             "-ffast-math",
+             "-funroll-loops",
+-            # Keep native architecture only for Linux
+-            "-march=native"  
+         ]
++        # FLATNAV_SIMD selects the SIMD level of FlatNav's distance kernels:
++        #   avx2   (default) AVX2 + FMA, AVX-512 explicitly disabled
++        #   native -march=native (AVX-512 on CPUs that have it)
++        if FLATNAV_SIMD == "native":
++            compile_args.append("-march=native")
++        else:
++            compile_args.extend(AVX2_COMPILE_ARGS)
+ 
+     # Add SIMD flags if SIMD vectorization is enabled
+     if not int(os.environ.get("NO_SIMD_VECTORIZATION", "0")):
+@@ -92,9 +104,9 @@ def construct_cmake_args() -> List[str]:
+                 "sse2",
+                 "sse3",
+                 "avx",
+-                "avx512f",
+-                "avx512bw",
+             ]
++            if FLATNAV_SIMD == "native":
++                supported_simd_flags += ["avx512f", "avx512bw"]
+             simd_flags = [
+                 f"-m{flag}"
+                 for flag in supported_simd_flags
+diff --git a/python-bindings/src/flatnav/__init__.py b/python-bindings/src/flatnav/__init__.py
+index 4300609..1b6da19 100644
+--- a/python-bindings/src/flatnav/__init__.py
++++ b/python-bindings/src/flatnav/__init__.py
+@@ -2,6 +2,7 @@ import sys
+ from ._core import (
+     MetricType,
+     data_type,
++    simd_level,
+     __version__,
+     __doc__
+ )
+@@ -29,6 +30,7 @@ sys.modules['flatnav.data_type'] = _DataTypeModule
+ __all__ = [
+     'MetricType',
+     'data_type',
++    'simd_level',
+     'index',
+     '__version__',
+     '__doc__'
+diff --git a/python-bindings/src/flatnav/bindings.cpp b/python-bindings/src/flatnav/bindings.cpp
+index 8224a71..5fef8b3 100644
+--- a/python-bindings/src/flatnav/bindings.cpp
++++ b/python-bindings/src/flatnav/bindings.cpp
+@@ -53,6 +53,99 @@ auto cast_and_call(DataType data_type, const py::array& array, Func&& function,
+   }
+ }
+ 
++// ---------------------------------------------------------------------------
++// Shared (external) storage support.
++//
++// `storage` may be:
++//   * a faiss.IndexFlat / IndexFlatL2 / IndexFlatIP  -> zero-copy view of its codes
++//   * any faiss index with a flat `.storage` (IndexHNSWFlat, IndexNSGFlat, ...)
++//   * a C-contiguous 2D numpy array of the index's element type
++// Nothing is ever copied: if the input is not already in the right layout we
++// raise instead of silently making a private copy (which would defeat sharing).
++// ---------------------------------------------------------------------------
++struct ResolvedStorage {
++  const void* data = nullptr;
++  size_t rows = 0;
++  size_t cols = 0;
++  size_t row_bytes = 0;
++  py::object array;  // keeps the numpy view alive
++  py::object owner;  // the faiss index (if any) that owns the memory
++  bool is_faiss = false;
++};
++
++inline ResolvedStorage resolveExternalStorage(py::object storage, DataType data_type, int dim,
++                                              const std::string& distance_type) {
++  ResolvedStorage out;
++  out.owner = storage;
++  py::object array = storage;
++
++  bool looks_like_faiss = py::hasattr(storage, "ntotal") && py::hasattr(storage, "d");
++  if (looks_like_faiss) {
++    py::module_ faiss = py::module_::import("faiss");
++    py::object flat = storage;
++    if (!py::hasattr(flat, "get_xb")) {
++      // e.g. IndexHNSWFlat / IndexNSGFlat: use their flat storage.
++      if (py::hasattr(flat, "storage")) {
++        flat = faiss.attr("downcast_index")(flat.attr("storage"));
++      } else {
++        flat = faiss.attr("downcast_index")(flat);
++      }
++    }
++    if (!py::hasattr(flat, "get_xb")) {
++      throw std::invalid_argument(
++          "external_storage: faiss index has no flat float storage (need IndexFlat / IndexFlatL2 / "
++          "IndexFlatIP, or an index whose .storage is one).");
++    }
++    if (data_type != DataType::float32) {
++      throw std::invalid_argument("external_storage: faiss IndexFlat stores float32; create the index with "
++                                  "index_data_type=float32.");
++    }
++    // Metric check: FlatNav "l2" <-> faiss METRIC_L2, "angular" <-> METRIC_INNER_PRODUCT.
++    if (py::hasattr(flat, "metric_type")) {
++      int metric = flat.attr("metric_type").cast<int>();
++      int want = (distance_type == "l2") ? faiss.attr("METRIC_L2").cast<int>()
++                                         : faiss.attr("METRIC_INNER_PRODUCT").cast<int>();
++      if (metric != want) {
++        throw std::invalid_argument("external_storage: metric mismatch between the faiss storage and the "
++                                    "FlatNav distance_type `" +
++                                    distance_type + "`.");
++      }
++    }
++    size_t ntotal = flat.attr("ntotal").cast<size_t>();
++    size_t d = flat.attr("d").cast<size_t>();
++    if (ntotal == 0) {
++      throw std::invalid_argument("external_storage: the faiss storage is empty. Add the vectors to it first.");
++    }
++    array = faiss.attr("rev_swig_ptr")(flat.attr("get_xb")(), ntotal * d).attr("reshape")(ntotal, d);
++    out.owner = flat;
++    out.is_faiss = true;
++  }
++
++  if (!py::isinstance<py::array>(array)) {
++    throw std::invalid_argument(
++        "external_storage must be a faiss IndexFlat (or an index with a flat .storage) or a 2D numpy array.");
++  }
++  py::array arr = array.cast<py::array>();
++  if (arr.ndim() != 2 || arr.shape(1) != dim) {
++    throw std::invalid_argument("external_storage must have shape (n, " + std::to_string(dim) + ").");
++  }
++  if (!(arr.flags() & py::array::c_style)) {
++    throw std::invalid_argument("external_storage must be C-contiguous (it is shared, not copied).");
++  }
++  bool dtype_ok = (data_type == DataType::float32 && py::isinstance<py::array_t<float>>(arr)) ||
++                  (data_type == DataType::int8 && py::isinstance<py::array_t<int8_t>>(arr)) ||
++                  (data_type == DataType::uint8 && py::isinstance<py::array_t<uint8_t>>(arr));
++  if (!dtype_ok) {
++    throw std::invalid_argument("external_storage dtype does not match index_data_type (no implicit copy).");
++  }
++  out.data = arr.data();
++  out.rows = static_cast<size_t>(arr.shape(0));
++  out.cols = static_cast<size_t>(arr.shape(1));
++  out.row_bytes = static_cast<size_t>(arr.strides(0));
++  out.array = arr;
++  return out;
++}
++
+ template <typename dist_t, typename label_t>
+ class PyIndex : public std::enable_shared_from_this<PyIndex<dist_t, label_t>> {
+ 
+@@ -60,6 +153,19 @@ class PyIndex : public std::enable_shared_from_this<PyIndex<dist_t, label_t>> {
+   label_t _label_id;
+   bool _verbose;
+   Index<dist_t, label_t>* _index;
++  // Shared-storage bookkeeping (empty for normal indexes). Declared after
++  // _index so they are destroyed after it.
++  py::object _storage_owner;
++  py::object _storage_array;
++  bool _storage_is_faiss = false;
++  std::string _distance_type;
++
++  void attachResolved(ResolvedStorage&& resolved) {
++    _index->attachExternalStorage(flatnav::ExternalVectorStorage{resolved.data, resolved.rows, resolved.row_bytes});
++    _storage_owner = std::move(resolved.owner);
++    _storage_array = std::move(resolved.array);
++    _storage_is_faiss = resolved.is_faiss;
++  }
+ 
+   typedef std::pair<py::array_t<float>, py::array_t<label_t>> DistancesLabelsPair;
+ 
+@@ -266,10 +372,80 @@ class PyIndex : public std::enable_shared_from_this<PyIndex<dist_t, label_t>> {
+     }
+   }
+ 
++  // Shared-storage constructor: FlatNav keeps only the graph and reads vectors
++  // from `external_storage` (a faiss IndexFlat or a numpy array).
++  PyIndex(std::unique_ptr<DistanceInterface<dist_t>>&& distance, DataType data_type, int dataset_size,
++          int max_edges_per_node, py::object external_storage, const std::string& distance_type,
++          bool verbose = false, bool collect_stats = false)
++      : _dim(distance->dimension()), _label_id(0), _verbose(verbose), _index(nullptr),
++        _distance_type(distance_type) {
++    auto resolved = resolveExternalStorage(external_storage, data_type, _dim, distance_type);
++    _index = new Index<dist_t, label_t>(
++        /* dist = */ std::move(distance),
++        /* dataset_size = */ dataset_size,
++        /* max_edges_per_node = */ max_edges_per_node,
++        /* storage = */ flatnav::ExternalVectorStorage{resolved.data, resolved.rows, resolved.row_bytes},
++        /* collect_stats = */ collect_stats,
++        /* data_type = */ data_type);
++    attachResolved(std::move(resolved));
++    if (_verbose) {
++      std::cout << "Graph-only index memory (vectors are shared): "
++                << (float)(_index->getTotalIndexMemory() / 1e9) << " GB\n"
++                << std::flush;
++      _index->getIndexSummary();
++    }
++  }
++
+   Index<dist_t, label_t>* getIndex() { return _index; }
+ 
+   ~PyIndex() { delete _index; }
+ 
++  // (Re)attach shared storage, e.g. after load_index() of a graph saved in
++  // shared-storage mode, or after the faiss storage grew.
++  void attachStorage(py::object storage) {
++    if (!_index->usesExternalStorage()) {
++      throw std::invalid_argument("attach_storage(): this index owns its vectors (not created with external_storage).");
++    }
++    std::string distance_type = _distance_type;
++    if (distance_type.empty()) {
++      // Loaded from disk: infer from the distance type of this specialization.
++      distance_type = std::is_same_v<dist_t, SquaredL2Distance<DataType::float32>> ||
++                              std::is_same_v<dist_t, SquaredL2Distance<DataType::int8>> ||
++                              std::is_same_v<dist_t, SquaredL2Distance<DataType::uint8>>
++                          ? "l2"
++                          : "angular";
++      _distance_type = distance_type;
++    }
++    attachResolved(resolveExternalStorage(storage, _index->getDataType(), _dim, distance_type));
++  }
++
++  void addFromStorage(int ef_construction, int num_initializations, py::object num_vectors, py::object labels) {
++    if (!_index->usesExternalStorage()) {
++      throw std::invalid_argument("add_from_storage(): index was not created with external_storage; use add().");
++    }
++    // A faiss IndexFlat may have reallocated its buffer since we attached
++    // (faiss add()); refresh the pointer before building.
++    if (_storage_is_faiss) {
++      attachStorage(_storage_owner);
++    }
++    size_t start = _index->currentNumNodes();
++    size_t n = num_vectors.is_none()
++                   ? std::min(_index->externalStorageNumVectors(), _index->maxNodeCount()) - start
++                   : num_vectors.cast<size_t>();
++    std::vector<label_t> vec_labels;
++    if (!labels.is_none()) {
++      vec_labels = py::cast<std::vector<label_t>>(labels);
++    }
++    py::gil_scoped_release gil;
++    _index->addFromStorage(n, ef_construction, num_initializations, vec_labels);
++  }
++
++  bool usesExternalStorage() const { return _index->usesExternalStorage(); }
++
++  uintptr_t storageDataPtr() const { return reinterpret_cast<uintptr_t>(_index->externalStorageData()); }
++
++  uint64_t graphMemoryBytes() const { return _index->getTotalIndexMemory(); }
++
+   uint64_t getQueryDistanceComputations() const {
+     auto distance_computations = _index->distanceComputations();
+     _index->resetStats();
+@@ -456,6 +632,29 @@ py::object createIndex(const std::string& distance_type, int dim, Args&&... args
+   return py::cast(index);
+ }
+ 
++template <DataType data_type>
++py::object createIndexWithStorage(const std::string& distance_type, int dim, int dataset_size,
++                                  int max_edges_per_node, py::object external_storage, bool verbose,
++                                  bool collect_stats) {
++  validateDistanceType(distance_type);
++  std::string dist_type = distance_type;
++  std::transform(dist_type.begin(), dist_type.end(), dist_type.begin(),
++                 [](unsigned char c) { return std::tolower(c); });
++
++  if (dist_type == "l2") {
++    auto distance = SquaredL2Distance<data_type>::create(dim);
++    auto index = std::make_shared<PyIndex<SquaredL2Distance<data_type>, int>>(
++        std::move(distance), data_type, dataset_size, max_edges_per_node, external_storage, dist_type, verbose,
++        collect_stats);
++    return py::cast(index);
++  }
++  auto distance = InnerProductDistance<data_type>::create(dim);
++  auto index = std::make_shared<PyIndex<InnerProductDistance<data_type>, int>>(
++      std::move(distance), data_type, dataset_size, max_edges_per_node, external_storage, dist_type, verbose,
++      collect_stats);
++  return py::cast(index);
++}
++
+ template <typename dist_t, typename label_t>
+ void bindSpecialization(py::module_& index_submodule) {
+   using IndexType = typename IndexSpecialization<dist_t>::type;
+@@ -505,6 +704,23 @@ void bindSpecialization(py::module_& index_submodule) {
+       .def_property_readonly("max_edges_per_node", &IndexType::getMaxEdgesPerNode)
+       .def("set_node_neighbors", &IndexType::setNodeNeighbors, py::arg("node"),py::arg("neighbors")
+       )
++      .def(
++          "add_from_storage",
++          [](IndexType& index, int ef_construction, int num_initializations, py::object num_vectors,
++             py::object labels) { index.addFromStorage(ef_construction, num_initializations, num_vectors, labels); },
++          py::arg("ef_construction"), py::arg("num_initializations") = 100, py::arg("num_vectors") = py::none(),
++          py::arg("labels") = py::none(),
++          "Build the graph over the shared storage rows [ntotal_in_graph, ntotal_in_graph + num_vectors).\n"
++          "No vector is copied; node i == storage row i, and labels default to the row id (== faiss id).\n"
++          "num_vectors=None inserts every storage row not yet in the graph.")
++      .def("attach_storage", &IndexType::attachStorage, py::arg("storage"),
++           "Attach/refresh the shared storage (faiss IndexFlat, an index with a flat .storage, or a\n"
++           "C-contiguous numpy array). Required after load_index() of a shared-storage graph.")
++      .def_property_readonly("uses_external_storage", &IndexType::usesExternalStorage)
++      .def_property_readonly("storage_data_ptr", &IndexType::storageDataPtr,
++                             "Address of the first vector FlatNav reads (0 if owned/not attached).")
++      .def_property_readonly("graph_memory_bytes", &IndexType::graphMemoryBytes,
++                             "Bytes allocated by FlatNav for its node blocks (graph only when shared).")
+       .def_property_readonly("num_threads", &IndexType::getNumThreads, NUM_THREADS_DOCSTRING);
+ }
+ 
+@@ -521,7 +737,24 @@ void defineIndexSubmodule(py::module_& index_submodule) {
+   index_submodule.def(
+       "create",
+       [](const std::string& distance_type, int dim, int dataset_size, int max_edges_per_node,
+-         DataType index_data_type, bool verbose = false, bool collect_stats = false) {
++         DataType index_data_type, bool verbose = false, bool collect_stats = false,
++         py::object external_storage = py::none()) {
++        if (!external_storage.is_none()) {
++          switch (index_data_type) {
++            case DataType::float32:
++              return createIndexWithStorage<DataType::float32>(distance_type, dim, dataset_size,
++                                                               max_edges_per_node, external_storage, verbose,
++                                                               collect_stats);
++            case DataType::int8:
++              return createIndexWithStorage<DataType::int8>(distance_type, dim, dataset_size, max_edges_per_node,
++                                                            external_storage, verbose, collect_stats);
++            case DataType::uint8:
++              return createIndexWithStorage<DataType::uint8>(distance_type, dim, dataset_size, max_edges_per_node,
++                                                             external_storage, verbose, collect_stats);
++            default:
++              throw std::runtime_error("Unsupported data type");
++          }
++        }
+         switch (index_data_type) {
+           case DataType::float32:
+             return createIndex<DataType::float32>(distance_type, dim, dataset_size, max_edges_per_node,
+@@ -538,7 +771,7 @@ void defineIndexSubmodule(py::module_& index_submodule) {
+       },
+       py::arg("distance_type"), py::arg("dim"), py::arg("dataset_size"), py::arg("max_edges_per_node"),
+       py::arg("index_data_type") = DataType::float32, py::arg("verbose") = false,
+-      py::arg("collect_stats") = false, CONSTRUCTOR_DOCSTRING);
++      py::arg("collect_stats") = false, py::arg("external_storage") = py::none(), CONSTRUCTOR_DOCSTRING);
+ 
+   index_submodule.def(
+       "create_sq",
+@@ -615,6 +848,20 @@ PYBIND11_MODULE(_core, module) {
+ #endif
+ 
+   module.doc() = CXX_EXTENSION_MODULE_DOCSTRING;
++
++  // SIMD level FlatNav's distance kernels were compiled with (FLATNAV_SIMD
++  // in setup.py: "avx2" by default, "native" may enable AVX-512).
++#if defined(USE_AVX512)
++  module.attr("simd_level") = "AVX-512";
++#elif defined(__AVX2__) && defined(USE_AVX)
++  module.attr("simd_level") = "AVX2";
++#elif defined(USE_AVX)
++  module.attr("simd_level") = "AVX";
++#elif defined(USE_SSE)
++  module.attr("simd_level") = "SSE";
++#else
++  module.attr("simd_level") = "scalar";
++#endif
+   auto data_type_submodule = module.def_submodule("data_type");
+   defineDatatypeEnums(data_type_submodule);
+ 
+diff --git a/python-bindings/unit_tests/test_faiss_shared_storage.py b/python-bindings/unit_tests/test_faiss_shared_storage.py
+new file mode 100644
+index 0000000..ab115aa
+--- /dev/null
++++ b/python-bindings/unit_tests/test_faiss_shared_storage.py
+@@ -0,0 +1,192 @@
++"""FlatNav graph built directly on faiss storage (no vector copy).
++
++Run with:  pytest -q python-bindings/unit_tests/test_faiss_shared_storage.py
++Requires faiss (faiss-cpu or a local faiss build with Python bindings).
++"""
++import gc
++import os
++import tempfile
++
++import numpy as np
++import pytest
++
++faiss = pytest.importorskip("faiss")
++import flatnav  # noqa: E402
++
++N, NQ, D, M, K = 20000, 200, 64, 32, 10
++EF_C, EF_S = 100, 256  # uniform random 64-d data is hard; ef 256 -> recall@10 ~0.95
++
++
++def faiss_xb_view(flat):
++    """Zero-copy numpy view of a faiss.IndexFlat's vectors."""
++    return faiss.rev_swig_ptr(flat.get_xb(), flat.ntotal * flat.d).reshape(flat.ntotal, flat.d)
++
++
++def recall(I, gt):
++    return np.mean([len(set(a) & set(b)) / K for a, b in zip(I, gt)])
++
++
++@pytest.fixture(scope="module")
++def data():
++    rng = np.random.default_rng(0)
++    xb = rng.random((N, D), dtype=np.float32)
++    xq = rng.random((NQ, D), dtype=np.float32)
++    return xb, xq
++
++
++@pytest.fixture(scope="module")
++def shared(data):
++    xb, xq = data
++    storage = faiss.IndexFlatL2(D)
++    storage.add(xb)
++    index = flatnav.index.create(
++        distance_type="l2", dim=D, dataset_size=N, max_edges_per_node=M, external_storage=storage
++    )
++    index.set_num_threads(min(4, os.cpu_count() or 1))
++    index.add_from_storage(ef_construction=EF_C)
++    _, gt = storage.search(xq, K)  # exact kNN from the *same* storage
++    return storage, index, gt
++
++
++def test_zero_copy_and_recall(data, shared):
++    storage, index, gt = shared
++    assert index.uses_external_storage
++    # FlatNav reads exactly faiss' buffer.
++    assert index.storage_data_ptr == faiss_xb_view(storage).ctypes.data
++    # Graph-only allocation: (M links + label) * 4 bytes per node.
++    assert index.graph_memory_bytes == N * (4 * M + 4)
++    _, I = index.search(data[1], K, EF_S)
++    assert recall(I, gt) > 0.9
++
++
++def test_matches_owned_flatnav(data, shared):
++    xb, xq = data
++    storage, index, gt = shared
++    owned = flatnav.index.create(distance_type="l2", dim=D, dataset_size=N, max_edges_per_node=M)
++    owned.set_num_threads(min(4, os.cpu_count() or 1))
++    owned.add(xb, ef_construction=EF_C)
++    assert owned.graph_memory_bytes == N * (4 * D + 4 * M + 4)
++    _, I_own = owned.search(xq, K, EF_S)
++    _, I_sh = index.search(xq, K, EF_S)
++    assert abs(recall(I_own, gt) - recall(I_sh, gt)) < 0.02
++
++
++def test_reads_faiss_memory_live(data, shared):
++    xb, _ = data
++    storage, index, _ = shared
++    view = faiss_xb_view(storage)
++    q = xb[7:8].copy()
++    D0, I0 = index.search(q, 1, EF_S)
++    assert I0[0, 0] == 7 and D0[0, 0] == 0
++    view[7] += 1.0  # mutate faiss' storage in place
++    try:
++        D1, I1 = index.search(q, K, EF_S)
++        hit = np.where(I1[0] == 7)[0]
++        assert len(hit) == 0 or np.isclose(D1[0, hit[0]], D, rtol=1e-4)
++    finally:
++        view[7] -= 1.0
++
++
++def test_share_storage_of_faiss_hnsw(data):
++    xb, xq = data
++    hnsw = faiss.IndexHNSWFlat(D, 16)
++    hnsw.add(xb)
++    index = flatnav.index.create("l2", D, N, M, external_storage=hnsw)  # uses hnsw.storage
++    index.add_from_storage(ef_construction=EF_C)
++    flat = faiss.downcast_index(hnsw.storage)
++    assert index.storage_data_ptr == faiss_xb_view(flat).ctypes.data
++    _, gt = flat.search(xq, K)
++    _, I = index.search(xq, K, EF_S)
++    assert recall(I, gt) > 0.9
++
++
++def test_index_keeps_storage_alive(data):
++    xb, xq = data
++
++    def build():
++        storage = faiss.IndexFlatL2(D)
++        storage.add(xb[:2000])
++        idx = flatnav.index.create("l2", D, 2000, 16, external_storage=storage)
++        idx.add_from_storage(ef_construction=50)
++        return idx  # `storage` goes out of scope here
++
++    idx = build()
++    gc.collect()
++    _, I = idx.search(xb[:5], 1, 50)
++    assert list(I[:, 0]) == [0, 1, 2, 3, 4]
++
++
++def test_save_load_graph_only(data, shared):
++    _, xq = data
++    storage, index, _ = shared
++    with tempfile.TemporaryDirectory() as tmp:
++        path = os.path.join(tmp, "graph.index")
++        index.save(path)
++        # vectors are NOT in the file: graph only
++        assert os.path.getsize(path) < N * (4 * M + 4) + 4096
++        loaded = flatnav.index.IndexL2Float.load_index(path)
++    assert loaded.uses_external_storage
++    with pytest.raises(RuntimeError):
++        loaded.search(xq, K, EF_S)
++    loaded.attach_storage(storage)
++    _, I_a = index.search(xq, K, EF_S)
++    _, I_b = loaded.search(xq, K, EF_S)
++    np.testing.assert_array_equal(I_a, I_b)
++
++
++def test_incremental_add_after_faiss_grows(data):
++    xb, xq = data
++    storage = faiss.IndexFlatL2(D)
++    storage.add(xb[:5000])
++    idx = flatnav.index.create("l2", D, N, M, external_storage=storage)
++    idx.add_from_storage(ef_construction=EF_C)
++    storage.add(xb[5000:])  # may reallocate faiss' buffer
++    idx.add_from_storage(ef_construction=EF_C)  # re-attaches, then inserts rows 5000..N-1
++    assert idx.storage_data_ptr == faiss_xb_view(storage).ctypes.data
++    _, gt = storage.search(xq, K)
++    _, I = idx.search(xq, K, EF_S)
++    assert recall(I, gt) > 0.9
++
++
++def test_guards(data):
++    xb, _ = data
++    storage = faiss.IndexFlatL2(D)
++    storage.add(xb[:1000])
++    idx = flatnav.index.create("l2", D, 1000, 16, external_storage=storage)
++    with pytest.raises(RuntimeError):
++        idx.add(xb[:10], ef_construction=50)  # vectors must go into faiss storage
++    ip = faiss.IndexFlatIP(D)
++    ip.add(xb[:1000])
++    with pytest.raises(ValueError):
++        flatnav.index.create("l2", D, 1000, 16, external_storage=ip)  # metric mismatch
++    with pytest.raises(ValueError):
++        flatnav.index.create("l2", D, 1000, 16, external_storage=np.asfortranarray(xb[:1000]))
++    with pytest.raises(ValueError):
++        flatnav.index.create("l2", D, 1000, 16, external_storage=xb[:1000].astype(np.float64))
++    # Plain numpy buffers work too (zero-copy).
++    arr = np.ascontiguousarray(xb[:1000])
++    np_idx = flatnav.index.create("l2", D, 1000, 16, external_storage=arr)
++    np_idx.add_from_storage(ef_construction=50)
++    assert np_idx.storage_data_ptr == arr.ctypes.data
++
++
++def test_inner_product_storage(data):
++    xb, xq = data
++    xbn = xb / np.linalg.norm(xb, axis=1, keepdims=True)
++    xqn = xq / np.linalg.norm(xq, axis=1, keepdims=True)
++    storage = faiss.IndexFlatIP(D)
++    storage.add(xbn)
++    idx = flatnav.index.create("angular", D, N, M, external_storage=storage)
++    idx.set_num_threads(min(4, os.cpu_count() or 1))
++    idx.add_from_storage(ef_construction=EF_C)
++    _, gt = storage.search(xqn, K)
++    _, I = idx.search(xqn, K, EF_S)
++    assert recall(I, gt) > 0.9
++
++
++def test_simd_level_reported():
++    # "AVX2" for the default FLATNAV_SIMD=avx2 build; never AVX-512 unless
++    # the extension was built with FLATNAV_SIMD=native.
++    assert flatnav.simd_level in {"AVX2", "AVX", "SSE", "scalar", "AVX-512"}
++    if os.environ.get("FLATNAV_SIMD", "avx2") == "avx2":
++        assert flatnav.simd_level != "AVX-512"

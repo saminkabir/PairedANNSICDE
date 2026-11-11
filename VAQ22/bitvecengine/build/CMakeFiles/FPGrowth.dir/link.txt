@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fopenmp -shared -Wl,-soname,libFPGrowth.so -o libFPGrowth.so CMakeFiles/FPGrowth.dir/utils/FPGrowth/fptree.o 

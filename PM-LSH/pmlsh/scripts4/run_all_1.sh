@@ -1,0 +1,1 @@
+./script1.sh > log1.txt & ./script4.sh > log4.txt & ./script5.sh > log5.txt & ./script6.sh > log6.txt & echo 'complete'

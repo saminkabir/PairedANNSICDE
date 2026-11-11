@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fopenmp -shared -Wl,-soname,libVAQ.so -o libVAQ.so CMakeFiles/VAQ.dir/utils/Heap.o CMakeFiles/VAQ.dir/VAQ.o 

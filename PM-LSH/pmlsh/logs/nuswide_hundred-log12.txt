@@ -1,0 +1,60 @@
+Using PM-LSH for nuswide_hundred ...
+N=        268643
+dim=      500
+c=        1.5
+k=        100
+m=        10
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.401558 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.32225 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.723096 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    1.12556ms.
+
+TOTAL QUERY TIME:  112.556ms.
+
+AVG RECALL:        0.0202
+AVG MAP:           0.0155318
+AVG RATIO:         1.41722
+AVG COST:          0.00296323
+AVG ROUNDS:        1
+	Command being timed: "./pmlsh nuswide_hundred 268643 500 10 1.5 0.2 300 100 nuswide_hundred-log12.ivecs"
+	User time (seconds): 2.22
+	System time (seconds): 0.38
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 641464
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 162472
+	Voluntary context switches: 1
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

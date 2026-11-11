@@ -1,0 +1,67 @@
+Using PM-LSH for ethz ...
+N=        36643
+dim=      256
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.029237 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.141743 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 1.12955 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.080043 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    2.07294ms.
+
+TOTAL QUERY TIME:  207.294ms.
+
+AVG RECALL:        0.9645
+AVG MAP:           0.947768
+AVG RATIO:         1.00082
+AVG COST:          0.0434367
+AVG ROUNDS:        28.26
+	Command being timed: "./pmlsh ethz 36643 256 15 1.75 0.2 1.0 100"
+	User time (seconds): 1.53
+	System time (seconds): 0.08
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 75692
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 24591
+	Voluntary context switches: 8
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

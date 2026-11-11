@@ -1,0 +1,60 @@
+Using PM-LSH for space1V ...
+N=        1000000
+dim=      100
+c=        1.15
+k=        100
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.303153 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.563861 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.43941 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    220.33ms.
+
+TOTAL QUERY TIME:  22033ms.
+
+AVG RECALL:        0.5584
+AVG MAP:           0.366775
+AVG RATIO:         1.0164
+AVG COST:          0.19942
+AVG ROUNDS:        121.87
+	Command being timed: "./pmlsh space1V 1000000 100 5 1.15 0.2 1.0 100"
+	User time (seconds): 25.67
+	System time (seconds): 0.78
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1297900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 329706
+	Voluntary context switches: 3
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

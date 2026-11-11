@@ -1,0 +1,320 @@
+Using DB-LSH for astro1m ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.25
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/astro1m/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.75035s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000123s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000418s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.56529s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.939s
+The 1-th R*-Tree has been built. Elapsed time: 0.861s
+The 2-th R*-Tree has been built. Elapsed time: 0.854s
+The 3-th R*-Tree has been built. Elapsed time: 0.855s
+The 4-th R*-Tree has been built. Elapsed time: 0.869s
+BUILDING TIME: 4.37836s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    147.814ms.
+
+TOTAL QUERY TIME:    14781.4ms.
+
+AVG RECALL:        0.66
+AVG MAP:        0.491251
+6600 10000 100
+AVG RATIO:         1.00613
+AVG COST:          0.2501
+AVG ROUNDS:        1.56
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for astro1m ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.35
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/astro1m/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.835114s.
+
+LOADING BENMARK...
+LOADING TIME: 4e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00022s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.50506s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.954s
+The 1-th R*-Tree has been built. Elapsed time: 0.877s
+The 2-th R*-Tree has been built. Elapsed time: 0.866s
+The 3-th R*-Tree has been built. Elapsed time: 0.860s
+The 4-th R*-Tree has been built. Elapsed time: 0.870s
+BUILDING TIME: 4.42721s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    193.419ms.
+
+TOTAL QUERY TIME:    19341.9ms.
+
+AVG RECALL:        0.7534
+AVG MAP:        0.610834
+7534 10000 100
+AVG RATIO:         1.00409
+AVG COST:          0.3501
+AVG ROUNDS:        1.92
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for astro1m ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.5
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/astro1m/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.842049s.
+
+LOADING BENMARK...
+LOADING TIME: 3.9e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000221s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.5234s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.956s
+The 1-th R*-Tree has been built. Elapsed time: 0.877s
+The 2-th R*-Tree has been built. Elapsed time: 0.868s
+The 3-th R*-Tree has been built. Elapsed time: 0.869s
+The 4-th R*-Tree has been built. Elapsed time: 0.863s
+BUILDING TIME: 4.43208s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    269.078ms.
+
+TOTAL QUERY TIME:    26907.8ms.
+
+AVG RECALL:        0.8489
+AVG MAP:        0.745169
+8489 10000 100
+AVG RATIO:         1.0023
+AVG COST:          0.5001
+AVG ROUNDS:        2
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for astro1m ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.55
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/astro1m/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.836693s.
+
+LOADING BENMARK...
+LOADING TIME: 3.6e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000212s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.49209s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.954s
+The 1-th R*-Tree has been built. Elapsed time: 0.882s
+The 2-th R*-Tree has been built. Elapsed time: 0.871s
+The 3-th R*-Tree has been built. Elapsed time: 0.873s
+The 4-th R*-Tree has been built. Elapsed time: 0.864s
+BUILDING TIME: 4.44422s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    279.625ms.
+
+TOTAL QUERY TIME:    27962.5ms.
+
+AVG RECALL:        0.8764
+AVG MAP:        0.78932
+8764 10000 100
+AVG RATIO:         1.00182
+AVG COST:          0.5501
+AVG ROUNDS:        2
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for astro1m ...
+c=        1.5
+k=        100
+L=        5
+K=        14
+beta=     0.65
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/astro1m/
+N=    1000000
+dim=  256
+
+Qnum=  100
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.929428s.
+
+LOADING BENMARK...
+LOADING TIME: 4.3e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000233s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.50908s.
+
+BUILDING INDEX...
+THERE ARE 5 14-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.959s
+The 1-th R*-Tree has been built. Elapsed time: 0.876s
+The 2-th R*-Tree has been built. Elapsed time: 0.869s
+The 3-th R*-Tree has been built. Elapsed time: 0.874s
+The 4-th R*-Tree has been built. Elapsed time: 0.865s
+BUILDING TIME: 4.44255s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    324.275ms.
+
+TOTAL QUERY TIME:    32427.5ms.
+
+AVG RECALL:        0.9238
+AVG MAP:        0.864567
+9238 10000 100
+AVG RATIO:         1.00109
+AVG COST:          0.6501
+AVG ROUNDS:        2
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

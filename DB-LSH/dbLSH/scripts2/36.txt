@@ -1,0 +1,711 @@
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.028505s.
+
+LOADING BENMARK...
+LOADING TIME: 0.029584s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00313s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.438323s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.020s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.018s
+The 3-th R*-Tree has been built. Elapsed time: 0.018s
+The 4-th R*-Tree has been built. Elapsed time: 0.018s
+The 5-th R*-Tree has been built. Elapsed time: 0.018s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.017s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.017s
+The 18-th R*-Tree has been built. Elapsed time: 0.017s
+The 19-th R*-Tree has been built. Elapsed time: 0.017s
+BUILDING TIME: 0.355277s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    0.401571ms.
+
+TOTAL QUERY TIME:    401.571ms.
+
+AVG RECALL:        0.08047
+AVG MAP:        0.0349101
+8047 100000 100
+AVG RATIO:         1.51885
+AVG COST:          0.105627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.2
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.024329s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000362s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003095s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.435142s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.020s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.018s
+The 3-th R*-Tree has been built. Elapsed time: 0.018s
+The 4-th R*-Tree has been built. Elapsed time: 0.018s
+The 5-th R*-Tree has been built. Elapsed time: 0.018s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.019s
+The 18-th R*-Tree has been built. Elapsed time: 0.019s
+The 19-th R*-Tree has been built. Elapsed time: 0.019s
+BUILDING TIME: 0.36254s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    0.740056ms.
+
+TOTAL QUERY TIME:    740.056ms.
+
+AVG RECALL:        0.22844
+AVG MAP:        0.146873
+22844 100000 100
+AVG RATIO:         1.27686
+AVG COST:          0.205627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.3
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.023096s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000327s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003097s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.446269s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.022s
+The 1-th R*-Tree has been built. Elapsed time: 0.020s
+The 2-th R*-Tree has been built. Elapsed time: 0.020s
+The 3-th R*-Tree has been built. Elapsed time: 0.020s
+The 4-th R*-Tree has been built. Elapsed time: 0.019s
+The 5-th R*-Tree has been built. Elapsed time: 0.019s
+The 6-th R*-Tree has been built. Elapsed time: 0.019s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.017s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.018s
+The 18-th R*-Tree has been built. Elapsed time: 0.018s
+The 19-th R*-Tree has been built. Elapsed time: 0.018s
+BUILDING TIME: 0.369533s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    1.04578ms.
+
+TOTAL QUERY TIME:    1045.78ms.
+
+AVG RECALL:        0.44174
+AVG MAP:        0.319214
+44174 100000 100
+AVG RATIO:         1.12582
+AVG COST:          0.305627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.4
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.025585s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000283s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003078s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.436377s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.019s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.018s
+The 3-th R*-Tree has been built. Elapsed time: 0.018s
+The 4-th R*-Tree has been built. Elapsed time: 0.018s
+The 5-th R*-Tree has been built. Elapsed time: 0.018s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.019s
+The 18-th R*-Tree has been built. Elapsed time: 0.019s
+The 19-th R*-Tree has been built. Elapsed time: 0.019s
+BUILDING TIME: 0.360184s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    1.53697ms.
+
+TOTAL QUERY TIME:    1536.97ms.
+
+AVG RECALL:        0.4916
+AVG MAP:        0.37268
+49160 100000 100
+AVG RATIO:         1.10988
+AVG COST:          0.405627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.5
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.02614s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000297s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003079s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.434495s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.019s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.017s
+The 3-th R*-Tree has been built. Elapsed time: 0.017s
+The 4-th R*-Tree has been built. Elapsed time: 0.017s
+The 5-th R*-Tree has been built. Elapsed time: 0.017s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.017s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.017s
+The 18-th R*-Tree has been built. Elapsed time: 0.018s
+The 19-th R*-Tree has been built. Elapsed time: 0.017s
+BUILDING TIME: 0.353054s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    1.81063ms.
+
+TOTAL QUERY TIME:    1810.63ms.
+
+AVG RECALL:        0.59093
+AVG MAP:        0.477816
+59093 100000 100
+AVG RATIO:         1.07674
+AVG COST:          0.505627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.6
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.027844s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000302s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003098s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.437422s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.019s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.018s
+The 3-th R*-Tree has been built. Elapsed time: 0.018s
+The 4-th R*-Tree has been built. Elapsed time: 0.018s
+The 5-th R*-Tree has been built. Elapsed time: 0.018s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.018s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.018s
+The 18-th R*-Tree has been built. Elapsed time: 0.018s
+The 19-th R*-Tree has been built. Elapsed time: 0.018s
+BUILDING TIME: 0.35725s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.3055ms.
+
+TOTAL QUERY TIME:    2305.5ms.
+
+AVG RECALL:        0.80289
+AVG MAP:        0.704439
+80289 100000 100
+AVG RATIO:         1.02403
+AVG COST:          0.605627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.7
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.039863s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000303s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003098s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.436592s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.021s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.018s
+The 3-th R*-Tree has been built. Elapsed time: 0.018s
+The 4-th R*-Tree has been built. Elapsed time: 0.017s
+The 5-th R*-Tree has been built. Elapsed time: 0.018s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.018s
+The 8-th R*-Tree has been built. Elapsed time: 0.018s
+The 9-th R*-Tree has been built. Elapsed time: 0.018s
+The 10-th R*-Tree has been built. Elapsed time: 0.018s
+The 11-th R*-Tree has been built. Elapsed time: 0.018s
+The 12-th R*-Tree has been built. Elapsed time: 0.018s
+The 13-th R*-Tree has been built. Elapsed time: 0.018s
+The 14-th R*-Tree has been built. Elapsed time: 0.019s
+The 15-th R*-Tree has been built. Elapsed time: 0.018s
+The 16-th R*-Tree has been built. Elapsed time: 0.018s
+The 17-th R*-Tree has been built. Elapsed time: 0.018s
+The 18-th R*-Tree has been built. Elapsed time: 0.018s
+The 19-th R*-Tree has been built. Elapsed time: 0.018s
+BUILDING TIME: 0.362913s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.56226ms.
+
+TOTAL QUERY TIME:    2562.26ms.
+
+AVG RECALL:        0.85108
+AVG MAP:        0.772396
+85108 100000 100
+AVG RATIO:         1.0167
+AVG COST:          0.705627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.8
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.026741s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000295s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.00309s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.42305s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.021s
+The 1-th R*-Tree has been built. Elapsed time: 0.018s
+The 2-th R*-Tree has been built. Elapsed time: 0.022s
+The 3-th R*-Tree has been built. Elapsed time: 0.023s
+The 4-th R*-Tree has been built. Elapsed time: 0.020s
+The 5-th R*-Tree has been built. Elapsed time: 0.017s
+The 6-th R*-Tree has been built. Elapsed time: 0.017s
+The 7-th R*-Tree has been built. Elapsed time: 0.017s
+The 8-th R*-Tree has been built. Elapsed time: 0.016s
+The 9-th R*-Tree has been built. Elapsed time: 0.016s
+The 10-th R*-Tree has been built. Elapsed time: 0.015s
+The 11-th R*-Tree has been built. Elapsed time: 0.020s
+The 12-th R*-Tree has been built. Elapsed time: 0.017s
+The 13-th R*-Tree has been built. Elapsed time: 0.015s
+The 14-th R*-Tree has been built. Elapsed time: 0.015s
+The 15-th R*-Tree has been built. Elapsed time: 0.016s
+The 16-th R*-Tree has been built. Elapsed time: 0.016s
+The 17-th R*-Tree has been built. Elapsed time: 0.015s
+The 18-th R*-Tree has been built. Elapsed time: 0.015s
+The 19-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.349246s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    2.7064ms.
+
+TOTAL QUERY TIME:    2706.4ms.
+
+AVG RECALL:        0.89929
+AVG MAP:        0.835107
+89929 100000 100
+AVG RATIO:         1.00993
+AVG COST:          0.805627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for netflix ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.9
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/netflix/
+N=    17770
+dim=  300
+
+Qnum=  1000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.035183s.
+
+LOADING BENMARK...
+LOADING TIME: 0.000304s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.003085s.
+
+COMPUTING HASH...
+COMPUTING TIME: 0.432666s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 0.017s
+The 1-th R*-Tree has been built. Elapsed time: 0.016s
+The 2-th R*-Tree has been built. Elapsed time: 0.016s
+The 3-th R*-Tree has been built. Elapsed time: 0.017s
+The 4-th R*-Tree has been built. Elapsed time: 0.017s
+The 5-th R*-Tree has been built. Elapsed time: 0.016s
+The 6-th R*-Tree has been built. Elapsed time: 0.018s
+The 7-th R*-Tree has been built. Elapsed time: 0.017s
+The 8-th R*-Tree has been built. Elapsed time: 0.016s
+The 9-th R*-Tree has been built. Elapsed time: 0.015s
+The 10-th R*-Tree has been built. Elapsed time: 0.016s
+The 11-th R*-Tree has been built. Elapsed time: 0.016s
+The 12-th R*-Tree has been built. Elapsed time: 0.016s
+The 13-th R*-Tree has been built. Elapsed time: 0.016s
+The 14-th R*-Tree has been built. Elapsed time: 0.021s
+The 15-th R*-Tree has been built. Elapsed time: 0.021s
+The 16-th R*-Tree has been built. Elapsed time: 0.017s
+The 17-th R*-Tree has been built. Elapsed time: 0.016s
+The 18-th R*-Tree has been built. Elapsed time: 0.017s
+The 19-th R*-Tree has been built. Elapsed time: 0.016s
+BUILDING TIME: 0.33738s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    3.24747ms.
+
+TOTAL QUERY TIME:    3247.47ms.
+
+AVG RECALL:        0.97553
+AVG MAP:        0.953234
+97553 100000 100
+AVG RATIO:         1.00205
+AVG COST:          0.905627
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

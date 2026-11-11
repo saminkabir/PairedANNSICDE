@@ -1,0 +1,60 @@
+Using PM-LSH for notre_hundred ...
+N=        332668
+dim=      128
+c=        1.25
+k=        100
+m=        10
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.16387 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.434789 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.922094 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    65.8258ms.
+
+TOTAL QUERY TIME:  6582.58ms.
+
+AVG RECALL:        0.9424
+AVG MAP:           0.911522
+AVG RATIO:         1.00243
+AVG COST:          0.154592
+AVG ROUNDS:        64.54
+	Command being timed: "./pmlsh notre_hundred 332668 128 10 1.25 0.2 1.0 100 notre_hundred-log10.ivecs"
+	User time (seconds): 7.85
+	System time (seconds): 0.30
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 567028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 143877
+	Voluntary context switches: 0
+	Involuntary context switches: 15
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

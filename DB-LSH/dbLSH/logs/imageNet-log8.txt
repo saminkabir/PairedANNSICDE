@@ -1,0 +1,64 @@
+Using DB-LSH for imageNet ...
+c=        1.5
+k=        20
+L=        5
+K=        12
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/imageNet/
+N=    2340373
+dim=  150
+
+Qnum=  200
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.3829s.
+
+LOADING BENMARK...
+LOADING TIME: 3.3e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000139s.
+
+COMPUTING HASH...
+COMPUTING TIME: 2.75304s.
+
+BUILDING INDEX...
+THERE ARE 5 12-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 2.887s
+The 1-th R*-Tree has been built. Elapsed time: 2.439s
+The 2-th R*-Tree has been built. Elapsed time: 2.315s
+The 3-th R*-Tree has been built. Elapsed time: 2.281s
+The 4-th R*-Tree has been built. Elapsed time: 2.283s
+BUILDING TIME: 12.206s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    105.502ms.
+
+TOTAL QUERY TIME:    21100.4ms.
+
+AVG RECALL:        0.12075
+AVG MAP:        0.080555
+483 4000 20
+AVG RATIO:         1.20117
+AVG COST:          0.100008
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

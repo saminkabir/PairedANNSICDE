@@ -1,0 +1,60 @@
+Using PM-LSH for audio_hundred ...
+N=        53387
+dim=      192
+c=        1.75
+k=        100
+m=        5
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.037917 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.054464 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.09951 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    6.27534ms.
+
+TOTAL QUERY TIME:  627.534ms.
+
+AVG RECALL:        0.8996
+AVG MAP:           0.850479
+AVG RATIO:         1.00593
+AVG COST:          0.151729
+AVG ROUNDS:        45.28
+	Command being timed: "./pmlsh audio_hundred 53387 192 5 1.75 0.2 1.0 100 audio_hundred-log16.ivecs"
+	User time (seconds): 0.79
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 98144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24039
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,64 @@
+Using DB-LSH for deep ...
+c=        1.25
+k=        20
+L=        5
+K=        10
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/deep/
+N=    1000000
+dim=  256
+
+Qnum=  200
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.09198s.
+
+LOADING BENMARK...
+LOADING TIME: 3.2e-05s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.000199s.
+
+COMPUTING HASH...
+COMPUTING TIME: 1.32909s.
+
+BUILDING INDEX...
+THERE ARE 5 10-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.189s
+The 1-th R*-Tree has been built. Elapsed time: 1.194s
+The 2-th R*-Tree has been built. Elapsed time: 1.184s
+The 3-th R*-Tree has been built. Elapsed time: 1.152s
+The 4-th R*-Tree has been built. Elapsed time: 1.186s
+BUILDING TIME: 5.90588s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    48.7609ms.
+
+TOTAL QUERY TIME:    9752.17ms.
+
+AVG RECALL:        0.098
+AVG MAP:        0.0326042
+392 4000 20
+AVG RATIO:         1.13759
+AVG COST:          0.10002
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here

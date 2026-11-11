@@ -1,0 +1,67 @@
+Using PM-LSH for NEIC ...
+N=        1000000
+dim=      256
+c=        1.5
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 1.11582 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.44299 s.
+
+COMPUTER BENCHMAKE...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH COMPUTERING WITH TIME: 90.772 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 4.10423 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    155.507ms.
+
+TOTAL QUERY TIME:  15550.7ms.
+
+AVG RECALL:        0.9101
+AVG MAP:           0.857362
+AVG RATIO:         1.0017
+AVG COST:          0.0784284
+AVG ROUNDS:        18.46
+	Command being timed: "./pmlsh NEIC 1000000 256 15 1.5 0.2 1.0 100"
+	User time (seconds): 112.69
+	System time (seconds): 2.46
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:07.80
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3498332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1098972
+	Voluntary context switches: 213
+	Involuntary context switches: 302
+	Swaps: 0
+	File system inputs: 2008440
+	File system outputs: 1560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

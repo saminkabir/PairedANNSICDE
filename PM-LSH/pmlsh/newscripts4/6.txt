@@ -1,0 +1,518 @@
+Using PM-LSH for nuswide ...
+N=        268643
+dim=      500
+c=        1.75
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.266142 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.64744 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.716086 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    38.8009ms.
+
+TOTAL QUERY TIME:  3880.09ms.
+
+AVG RECALL:        0.266
+AVG MAP:           0.157331
+AVG RATIO:         1.02821
+AVG COST:          0.00964574
+AVG ROUNDS:        18.86
+Using PM-LSH for nytimes ...
+N=        290000
+dim=      256
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.155508 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.944389 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.774103 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    47.5928ms.
+
+TOTAL QUERY TIME:  4759.29ms.
+
+AVG RECALL:        0.0776
+AVG MAP:           0.0463288
+AVG RATIO:         1.2041
+AVG COST:          0.0100085
+AVG ROUNDS:        7.29
+Using PM-LSH for random ...
+N=        1000000
+dim=      100
+c=        1.75
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.247852 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.14081 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.14586 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    127.986ms.
+
+TOTAL QUERY TIME:  12798.6ms.
+
+AVG RECALL:        0.4085
+AVG MAP:           0.223101
+AVG RATIO:         1.04398
+AVG COST:          0.00957146
+AVG ROUNDS:        8.59
+Using PM-LSH for sald1m ...
+N=        1000000
+dim=      128
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.307864 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.54953 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.17228 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    124.471ms.
+
+TOTAL QUERY TIME:  12447.1ms.
+
+AVG RECALL:        0.7748
+AVG MAP:           0.711922
+AVG RATIO:         1.01075
+AVG COST:          0.00767772
+AVG ROUNDS:        13.66
+Using PM-LSH for seismic1m ...
+N=        1000000
+dim=      256
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.507228 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.16828 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.35542 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    159.73ms.
+
+TOTAL QUERY TIME:  15973ms.
+
+AVG RECALL:        0.2616
+AVG MAP:           0.173559
+AVG RATIO:         1.0299
+AVG COST:          0.00981646
+AVG ROUNDS:        16.52
+Using PM-LSH for sift ...
+N=        1000000
+dim=      128
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.290228 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.56363 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.53045 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    112.127ms.
+
+TOTAL QUERY TIME:  11212.7ms.
+
+AVG RECALL:        0.735
+AVG MAP:           0.635355
+AVG RATIO:         1.01371
+AVG COST:          0.00904282
+AVG ROUNDS:        26.3
+Using PM-LSH for space1V ...
+N=        1000000
+dim=      100
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.240051 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.12733 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.30306 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    169.293ms.
+
+TOTAL QUERY TIME:  16929.3ms.
+
+AVG RECALL:        0.209
+AVG MAP:           0.0867169
+AVG RATIO:         1.05164
+AVG COST:          0.0100021
+AVG ROUNDS:        32.01
+Using PM-LSH for sun ...
+N=        79106
+dim=      512
+c=        1.75
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.087933 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.500558 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.171528 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    7.62259ms.
+
+TOTAL QUERY TIME:  762.259ms.
+
+AVG RECALL:        0.4545
+AVG MAP:           0.284493
+AVG RATIO:         1.02937
+AVG COST:          0.0100221
+AVG ROUNDS:        47.59
+Using PM-LSH for text-to-image ...
+N=        1000000
+dim=      200
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.397843 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 2.4507 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.39388 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    170.345ms.
+
+TOTAL QUERY TIME:  17034.5ms.
+
+AVG RECALL:        0.6217
+AVG MAP:           0.52655
+AVG RATIO:         1.03407
+AVG COST:          0.00936719
+AVG ROUNDS:        5.9
+Using PM-LSH for trevi ...
+N=        99900
+dim=      4096
+c=        1.75
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.648772 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 5.14175 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.242081 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    12.5831ms.
+
+TOTAL QUERY TIME:  1258.31ms.
+
+AVG RECALL:        0.643
+AVG MAP:           0.526275
+AVG RATIO:         1.0178
+AVG COST:          0.00992122
+AVG ROUNDS:        33.72
+Using PM-LSH for uqv ...
+N=        1000000
+dim=      256
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.466077 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.18409 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.00083 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    0.13134ms.
+
+TOTAL QUERY TIME:  13.134ms.
+
+AVG RECALL:        0.0005
+AVG MAP:           0
+AVG RATIO:         3.44663
+AVG COST:          0.00010624
+AVG ROUNDS:        1
+Using PM-LSH for ukbench ...
+N=        1097907
+dim=      128
+c=        1.75
+k=        20
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.312352 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 1.69821 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.89949 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    138.773ms.
+
+TOTAL QUERY TIME:  13877.3ms.
+
+AVG RECALL:        0.795
+AVG MAP:           0.723314
+AVG RATIO:         1.0101
+AVG COST:          0.00724991
+AVG ROUNDS:        23.81
+Using PM-LSH for word2vec ...
+N=        1000000
+dim=      300
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.557199 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 3.72297 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 3.07002 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    151.062ms.
+
+TOTAL QUERY TIME:  15106.2ms.
+
+AVG RECALL:        0.2651
+AVG MAP:           0.159345
+AVG RATIO:         1.03217
+AVG COST:          0.0096113
+AVG ROUNDS:        11.21
+Using PM-LSH for yahoomusic ...
+N=        136736
+dim=      300
+c=        1.75
+k=        100
+m=        15
+LOADING DATA...
+FINISH LOADING WITH TIME: 0.085086 s.
+
+HASHING...
+FINISH HASHING WITH TIME: 0.501813 s.
+
+BUILDING INDEX...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+FINISH BUILDING WITH TIME: 0.325726 s.
+
+RUNNING PM-LSH ...
+
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+FINISH QUERY!
+
+AVG QUERY TIME:    12.0558ms.
+
+TOTAL QUERY TIME:  1205.58ms.
+
+AVG RECALL:        0.6029
+AVG MAP:           0.505771
+AVG RATIO:         1.0376
+AVG COST:          0.00986829
+AVG ROUNDS:        7.27

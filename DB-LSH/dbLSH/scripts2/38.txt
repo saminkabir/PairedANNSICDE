@@ -1,0 +1,711 @@
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.1
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.1791s.
+
+LOADING BENMARK...
+LOADING TIME: 0.036615s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002721s.
+
+COMPUTING HASH...
+COMPUTING TIME: 19.1155s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.564s
+The 1-th R*-Tree has been built. Elapsed time: 1.579s
+The 2-th R*-Tree has been built. Elapsed time: 1.582s
+The 3-th R*-Tree has been built. Elapsed time: 1.551s
+The 4-th R*-Tree has been built. Elapsed time: 1.559s
+The 5-th R*-Tree has been built. Elapsed time: 1.551s
+The 6-th R*-Tree has been built. Elapsed time: 1.469s
+The 7-th R*-Tree has been built. Elapsed time: 1.393s
+The 8-th R*-Tree has been built. Elapsed time: 1.357s
+The 9-th R*-Tree has been built. Elapsed time: 1.337s
+The 10-th R*-Tree has been built. Elapsed time: 1.371s
+The 11-th R*-Tree has been built. Elapsed time: 1.356s
+The 12-th R*-Tree has been built. Elapsed time: 1.431s
+The 13-th R*-Tree has been built. Elapsed time: 1.411s
+The 14-th R*-Tree has been built. Elapsed time: 1.426s
+The 15-th R*-Tree has been built. Elapsed time: 1.392s
+The 16-th R*-Tree has been built. Elapsed time: 1.413s
+The 17-th R*-Tree has been built. Elapsed time: 1.376s
+The 18-th R*-Tree has been built. Elapsed time: 1.458s
+The 19-th R*-Tree has been built. Elapsed time: 1.492s
+BUILDING TIME: 29.0683s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    37.4851ms.
+
+TOTAL QUERY TIME:    374851ms.
+
+AVG RECALL:        0.000577
+AVG MAP:        0.000350065
+577 1000000 100
+AVG RATIO:         10.4998
+AVG COST:          0.1001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.2
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.876354s.
+
+LOADING BENMARK...
+LOADING TIME: 0.004829s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002428s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.7197s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.252s
+The 1-th R*-Tree has been built. Elapsed time: 1.217s
+The 2-th R*-Tree has been built. Elapsed time: 1.221s
+The 3-th R*-Tree has been built. Elapsed time: 1.224s
+The 4-th R*-Tree has been built. Elapsed time: 1.224s
+The 5-th R*-Tree has been built. Elapsed time: 1.201s
+The 6-th R*-Tree has been built. Elapsed time: 1.249s
+The 7-th R*-Tree has been built. Elapsed time: 1.215s
+The 8-th R*-Tree has been built. Elapsed time: 1.258s
+The 9-th R*-Tree has been built. Elapsed time: 1.245s
+The 10-th R*-Tree has been built. Elapsed time: 1.275s
+The 11-th R*-Tree has been built. Elapsed time: 1.226s
+The 12-th R*-Tree has been built. Elapsed time: 1.229s
+The 13-th R*-Tree has been built. Elapsed time: 1.202s
+The 14-th R*-Tree has been built. Elapsed time: 1.215s
+The 15-th R*-Tree has been built. Elapsed time: 1.200s
+The 16-th R*-Tree has been built. Elapsed time: 1.228s
+The 17-th R*-Tree has been built. Elapsed time: 1.184s
+The 18-th R*-Tree has been built. Elapsed time: 1.213s
+The 19-th R*-Tree has been built. Elapsed time: 1.195s
+BUILDING TIME: 24.4748s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    78.6468ms.
+
+TOTAL QUERY TIME:    786468ms.
+
+AVG RECALL:        0.062914
+AVG MAP:        0.030209
+62914 1000000 100
+AVG RATIO:         5.48471
+AVG COST:          0.2001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.3
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.3513s.
+
+LOADING BENMARK...
+LOADING TIME: 0.002506s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002571s.
+
+COMPUTING HASH...
+COMPUTING TIME: 18.6547s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.701s
+The 1-th R*-Tree has been built. Elapsed time: 1.517s
+The 2-th R*-Tree has been built. Elapsed time: 1.462s
+The 3-th R*-Tree has been built. Elapsed time: 1.437s
+The 4-th R*-Tree has been built. Elapsed time: 1.455s
+The 5-th R*-Tree has been built. Elapsed time: 1.420s
+The 6-th R*-Tree has been built. Elapsed time: 1.495s
+The 7-th R*-Tree has been built. Elapsed time: 1.463s
+The 8-th R*-Tree has been built. Elapsed time: 1.462s
+The 9-th R*-Tree has been built. Elapsed time: 1.477s
+The 10-th R*-Tree has been built. Elapsed time: 1.491s
+The 11-th R*-Tree has been built. Elapsed time: 1.462s
+The 12-th R*-Tree has been built. Elapsed time: 1.482s
+The 13-th R*-Tree has been built. Elapsed time: 1.424s
+The 14-th R*-Tree has been built. Elapsed time: 1.442s
+The 15-th R*-Tree has been built. Elapsed time: 1.475s
+The 16-th R*-Tree has been built. Elapsed time: 1.465s
+The 17-th R*-Tree has been built. Elapsed time: 1.374s
+The 18-th R*-Tree has been built. Elapsed time: 1.442s
+The 19-th R*-Tree has been built. Elapsed time: 1.461s
+BUILDING TIME: 29.4093s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    113.368ms.
+
+TOTAL QUERY TIME:    1.13368e+06ms.
+
+AVG RECALL:        0.14769
+AVG MAP:        0.079786
+147690 1000000 100
+AVG RATIO:         4.09783
+AVG COST:          0.3001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.4
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.93905s.
+
+LOADING BENMARK...
+LOADING TIME: 0.004387s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002589s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.7936s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.291s
+The 1-th R*-Tree has been built. Elapsed time: 1.214s
+The 2-th R*-Tree has been built. Elapsed time: 1.228s
+The 3-th R*-Tree has been built. Elapsed time: 1.187s
+The 4-th R*-Tree has been built. Elapsed time: 1.214s
+The 5-th R*-Tree has been built. Elapsed time: 1.199s
+The 6-th R*-Tree has been built. Elapsed time: 1.236s
+The 7-th R*-Tree has been built. Elapsed time: 1.211s
+The 8-th R*-Tree has been built. Elapsed time: 1.233s
+The 9-th R*-Tree has been built. Elapsed time: 1.187s
+The 10-th R*-Tree has been built. Elapsed time: 1.212s
+The 11-th R*-Tree has been built. Elapsed time: 1.219s
+The 12-th R*-Tree has been built. Elapsed time: 1.206s
+The 13-th R*-Tree has been built. Elapsed time: 1.226s
+The 14-th R*-Tree has been built. Elapsed time: 1.204s
+The 15-th R*-Tree has been built. Elapsed time: 1.209s
+The 16-th R*-Tree has been built. Elapsed time: 1.210s
+The 17-th R*-Tree has been built. Elapsed time: 1.194s
+The 18-th R*-Tree has been built. Elapsed time: 1.201s
+The 19-th R*-Tree has been built. Elapsed time: 1.221s
+BUILDING TIME: 24.3013s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    145.635ms.
+
+TOTAL QUERY TIME:    1.45635e+06ms.
+
+AVG RECALL:        0.255819
+AVG MAP:        0.164474
+255819 1000000 100
+AVG RATIO:         3.97431
+AVG COST:          0.4001
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.5
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.06937s.
+
+LOADING BENMARK...
+LOADING TIME: 0.002318s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002271s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.8396s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.387s
+The 1-th R*-Tree has been built. Elapsed time: 1.250s
+The 2-th R*-Tree has been built. Elapsed time: 1.201s
+The 3-th R*-Tree has been built. Elapsed time: 1.202s
+The 4-th R*-Tree has been built. Elapsed time: 1.206s
+The 5-th R*-Tree has been built. Elapsed time: 1.195s
+The 6-th R*-Tree has been built. Elapsed time: 1.236s
+The 7-th R*-Tree has been built. Elapsed time: 1.197s
+The 8-th R*-Tree has been built. Elapsed time: 1.209s
+The 9-th R*-Tree has been built. Elapsed time: 1.246s
+The 10-th R*-Tree has been built. Elapsed time: 1.251s
+The 11-th R*-Tree has been built. Elapsed time: 1.202s
+The 12-th R*-Tree has been built. Elapsed time: 1.243s
+The 13-th R*-Tree has been built. Elapsed time: 1.277s
+The 14-th R*-Tree has been built. Elapsed time: 1.283s
+The 15-th R*-Tree has been built. Elapsed time: 1.287s
+The 16-th R*-Tree has been built. Elapsed time: 1.283s
+The 17-th R*-Tree has been built. Elapsed time: 1.264s
+The 18-th R*-Tree has been built. Elapsed time: 1.304s
+The 19-th R*-Tree has been built. Elapsed time: 1.283s
+BUILDING TIME: 25.0065s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    185.861ms.
+
+TOTAL QUERY TIME:    1.85861e+06ms.
+
+AVG RECALL:        0.433362
+AVG MAP:        0.322413
+433362 1000000 100
+AVG RATIO:         3.0822
+AVG COST:          0.0706033
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.6
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.06659s.
+
+LOADING BENMARK...
+LOADING TIME: 0.002756s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002274s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.6129s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.405s
+The 1-th R*-Tree has been built. Elapsed time: 1.246s
+The 2-th R*-Tree has been built. Elapsed time: 1.198s
+The 3-th R*-Tree has been built. Elapsed time: 1.187s
+The 4-th R*-Tree has been built. Elapsed time: 1.194s
+The 5-th R*-Tree has been built. Elapsed time: 1.177s
+The 6-th R*-Tree has been built. Elapsed time: 1.219s
+The 7-th R*-Tree has been built. Elapsed time: 1.184s
+The 8-th R*-Tree has been built. Elapsed time: 1.205s
+The 9-th R*-Tree has been built. Elapsed time: 1.198s
+The 10-th R*-Tree has been built. Elapsed time: 1.197s
+The 11-th R*-Tree has been built. Elapsed time: 1.188s
+The 12-th R*-Tree has been built. Elapsed time: 1.210s
+The 13-th R*-Tree has been built. Elapsed time: 1.188s
+The 14-th R*-Tree has been built. Elapsed time: 1.191s
+The 15-th R*-Tree has been built. Elapsed time: 1.194s
+The 16-th R*-Tree has been built. Elapsed time: 1.210s
+The 17-th R*-Tree has been built. Elapsed time: 1.178s
+The 18-th R*-Tree has been built. Elapsed time: 1.183s
+The 19-th R*-Tree has been built. Elapsed time: 1.207s
+BUILDING TIME: 24.1596s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    222.887ms.
+
+TOTAL QUERY TIME:    2.22887e+06ms.
+
+AVG RECALL:        0.53821
+AVG MAP:        0.42707
+538210 1000000 100
+AVG RATIO:         2.38717
+AVG COST:          0.170603
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.7
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.23385s.
+
+LOADING BENMARK...
+LOADING TIME: 0.023193s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002261s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.6443s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.465s
+The 1-th R*-Tree has been built. Elapsed time: 1.222s
+The 2-th R*-Tree has been built. Elapsed time: 1.204s
+The 3-th R*-Tree has been built. Elapsed time: 1.174s
+The 4-th R*-Tree has been built. Elapsed time: 1.209s
+The 5-th R*-Tree has been built. Elapsed time: 1.187s
+The 6-th R*-Tree has been built. Elapsed time: 1.204s
+The 7-th R*-Tree has been built. Elapsed time: 1.206s
+The 8-th R*-Tree has been built. Elapsed time: 1.203s
+The 9-th R*-Tree has been built. Elapsed time: 1.190s
+The 10-th R*-Tree has been built. Elapsed time: 1.211s
+The 11-th R*-Tree has been built. Elapsed time: 1.192s
+The 12-th R*-Tree has been built. Elapsed time: 1.193s
+The 13-th R*-Tree has been built. Elapsed time: 1.200s
+The 14-th R*-Tree has been built. Elapsed time: 1.185s
+The 15-th R*-Tree has been built. Elapsed time: 1.181s
+The 16-th R*-Tree has been built. Elapsed time: 1.200s
+The 17-th R*-Tree has been built. Elapsed time: 1.169s
+The 18-th R*-Tree has been built. Elapsed time: 1.196s
+The 19-th R*-Tree has been built. Elapsed time: 1.181s
+BUILDING TIME: 24.1741s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    261.056ms.
+
+TOTAL QUERY TIME:    2.61056e+06ms.
+
+AVG RECALL:        0.644824
+AVG MAP:        0.541679
+644824 1000000 100
+AVG RATIO:         1.5136
+AVG COST:          0.270603
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.8
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 1.66967s.
+
+LOADING BENMARK...
+LOADING TIME: 0.002074s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002303s.
+
+COMPUTING HASH...
+COMPUTING TIME: 18.1753s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.490s
+The 1-th R*-Tree has been built. Elapsed time: 1.288s
+The 2-th R*-Tree has been built. Elapsed time: 1.285s
+The 3-th R*-Tree has been built. Elapsed time: 1.307s
+The 4-th R*-Tree has been built. Elapsed time: 1.330s
+The 5-th R*-Tree has been built. Elapsed time: 1.252s
+The 6-th R*-Tree has been built. Elapsed time: 1.288s
+The 7-th R*-Tree has been built. Elapsed time: 1.247s
+The 8-th R*-Tree has been built. Elapsed time: 1.263s
+The 9-th R*-Tree has been built. Elapsed time: 1.255s
+The 10-th R*-Tree has been built. Elapsed time: 1.258s
+The 11-th R*-Tree has been built. Elapsed time: 1.253s
+The 12-th R*-Tree has been built. Elapsed time: 1.355s
+The 13-th R*-Tree has been built. Elapsed time: 1.323s
+The 14-th R*-Tree has been built. Elapsed time: 1.294s
+The 15-th R*-Tree has been built. Elapsed time: 1.257s
+The 16-th R*-Tree has been built. Elapsed time: 1.314s
+The 17-th R*-Tree has been built. Elapsed time: 1.298s
+The 18-th R*-Tree has been built. Elapsed time: 1.315s
+The 19-th R*-Tree has been built. Elapsed time: 1.284s
+BUILDING TIME: 25.9565s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    317.361ms.
+
+TOTAL QUERY TIME:    3.17361e+06ms.
+
+AVG RECALL:        0.757653
+AVG MAP:        0.668036
+757653 1000000 100
+AVG RATIO:         1.46692
+AVG COST:          0.370603
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
+Using DB-LSH for uqv ...
+c=        1.5
+k=        100
+L=        20
+K=        40
+beta=     0.9
+R_min=    6.5
+
+LOADING DATA...
+Load from new file: /data/[username]/similarity-search/dataset/uqv/
+N=    1000000
+dim=  256
+
+Qnum=  10000
+
+size of base=  8
+
+size of query=  8
+
+LOADING TIME: 0.951605s.
+
+LOADING BENMARK...
+LOADING TIME: 0.004005s.
+
+
+START HASHING...
+
+SETTING HASH PARAMETER...
+SETTING TIME: 0.002304s.
+
+COMPUTING HASH...
+COMPUTING TIME: 16.5042s.
+
+BUILDING INDEX...
+THERE ARE 20 40-D HASH TABLES.
+The 0-th R*-Tree has been built. Elapsed time: 1.263s
+The 1-th R*-Tree has been built. Elapsed time: 1.201s
+The 2-th R*-Tree has been built. Elapsed time: 1.206s
+The 3-th R*-Tree has been built. Elapsed time: 1.179s
+The 4-th R*-Tree has been built. Elapsed time: 1.203s
+The 5-th R*-Tree has been built. Elapsed time: 1.207s
+The 6-th R*-Tree has been built. Elapsed time: 1.207s
+The 7-th R*-Tree has been built. Elapsed time: 1.194s
+The 8-th R*-Tree has been built. Elapsed time: 1.216s
+The 9-th R*-Tree has been built. Elapsed time: 1.187s
+The 10-th R*-Tree has been built. Elapsed time: 1.208s
+The 11-th R*-Tree has been built. Elapsed time: 1.210s
+The 12-th R*-Tree has been built. Elapsed time: 1.201s
+The 13-th R*-Tree has been built. Elapsed time: 1.200s
+The 14-th R*-Tree has been built. Elapsed time: 1.205s
+The 15-th R*-Tree has been built. Elapsed time: 1.200s
+The 16-th R*-Tree has been built. Elapsed time: 1.200s
+The 17-th R*-Tree has been built. Elapsed time: 1.196s
+The 18-th R*-Tree has been built. Elapsed time: 1.195s
+The 19-th R*-Tree has been built. Elapsed time: 1.194s
+BUILDING TIME: 24.0734s.
+
+
+RUNNING QUERY ...
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+AVG QUERY TIME:    336.183ms.
+
+TOTAL QUERY TIME:    3.36183e+06ms.
+
+AVG RECALL:        0.863062
+AVG MAP:        0.776904
+863062 1000000 100
+AVG RATIO:         1.03316
+AVG COST:          0.0411065
+AVG ROUNDS:        1
+
+QUERY FINISH... 
+
+
+Reach here
+Reach here
